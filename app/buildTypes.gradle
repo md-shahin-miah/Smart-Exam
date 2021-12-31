@@ -1,0 +1,46 @@
+buildTypes {
+    debug {
+
+//        shrinkResources true
+//        minifyEnabled true
+//        zipAlignEnabled true
+//
+//        proguardFile 'proguard/proguard-eventbus.pro'
+//        proguardFile 'proguard/proguard-rxjava.pro'
+//        proguardFile 'proguard/proguard-project.txt'
+//        proguardFile 'proguard/proguard-square-okhttp.pro'
+//        proguardFile 'proguard/proguard-square-okio.pro'
+//        proguardFile 'proguard/proguard-square-picasso.pro'
+//        proguardFile 'proguard/proguard-square-retrofit.pro'
+//        proguardFile 'proguard/proguard-square-dagger.pro'
+//        proguardFile 'proguard/proguard-gson.pro'
+//        proguardFile 'proguard/proguard-facebook.pro'
+//        proguardFile 'proguard/proguard-support-v7-appcompat.pro'
+//        proguardFile 'proguard/proguard-bottom-navigation-view-ex.pro'
+//        proguardFile 'proguard/proguard-yalantis-ucrop.pro'
+//        proguardFile 'proguard/consumer-proguard-rules.pro'
+//        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+    release {
+        shrinkResources true
+        minifyEnabled true
+        zipAlignEnabled true
+
+        proguardFile 'proguard/proguard-eventbus.pro'
+        proguardFile 'proguard/proguard-rxjava.pro'
+        proguardFile 'proguard/proguard-project.txt'
+        proguardFile 'proguard/proguard-square-okhttp.pro'
+        proguardFile 'proguard/proguard-square-okio.pro'
+        proguardFile 'proguard/proguard-square-picasso.pro'
+        proguardFile 'proguard/proguard-square-retrofit.pro'
+        proguardFile 'proguard/proguard-square-dagger.pro'
+        proguardFile 'proguard/proguard-gson.pro'
+        proguardFile 'proguard/proguard-facebook.pro'
+        proguardFile 'proguard/proguard-support-v7-appcompat.pro'
+        proguardFile 'proguard/proguard-bottom-navigation-view-ex.pro'
+        proguardFile 'proguard/proguard-yalantis-ucrop.pro'
+        proguardFile 'proguard/consumer-proguard-rules.pro'
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+    }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+
+        android:id="@+id/rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:buttonTint="@color/colorPrimary"
+        android:clickable="false"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+
+        android:id="@+id/etPollOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/ivDeletePollOption"
+        android:layout_toEndOf="@+id/rb"
+        tools:text="@tools:sample/lorem"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/light_black"
+        app:backgroundTint="@color/light_grey"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:id="@+id/ivDeletePollOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_clear"
+        app:tint="@color/light_black"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/padding_small"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+</RelativeLayout>

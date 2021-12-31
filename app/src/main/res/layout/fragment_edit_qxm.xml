@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_home_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-16dp"
+                    android:background="@color/colorPrimary"
+                    app:layout_collapseMode="parallax"
+                    app:title="Qxm">
+
+                    <RelativeLayout
+                        android:id="@+id/relative_toolbar_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_default"
+                        android:layout_marginEnd="@dimen/margin_default">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivBackArrow"
+                            android:layout_width="42dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/back_arrow"
+                            android:padding="@dimen/padding_medium"
+                            app:srcCompat="@drawable/ic_back_arrow" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:id="@+id/tvCreateQuestionHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:layout_toEndOf="@+id/ivBackArrow"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/edit_qxm"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_xx_large"
+                            tools:ignore="RelativeOverlap" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:id="@+id/ivDoneCreatingQuestion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="@dimen/padding_medium"
+                            app:srcCompat="@drawable/ic_done" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvUploadingImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:background="?attr/selectableItemBackground"
+                            android:contentDescription="@string/search_icon"
+                            android:padding="@dimen/padding_small"
+                            android:text="@string/uploading_image"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_small"
+                            app:fontFamily="@font/roboto_medium"
+                            android:clickable="false"
+                            android:visibility="gone"/>
+
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvQuestionSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_xx_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:paddingStart="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingEnd="@dimen/padding_small">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+
+                                android:id="@+id/etQuestionSetTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="@string/untitled_question_set_name"
+                                android:lineSpacingExtra="@dimen/line_spacing_large"
+                                android:textColor="@color/primary_text_color"
+                                android:textColorHint="@color/grey"
+                                android:textSize="@dimen/text_size_extra_large"/>
+
+                            <androidx.appcompat.widget.AppCompatEditText
+
+                                android:id="@+id/etQuestionSetDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/roboto"
+                                android:hint="@string/question_set_description"
+                                android:textColor="@color/primary_text_color"
+                                android:textColorHint="@color/grey"
+                                android:textSize="@dimen/text_size_large"
+                                android:lineSpacingExtra="@dimen/line_spacing_extra"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/margin_medium"
+                                android:background="@color/light_grey"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/llAddThumbnail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_xx_small"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="0dp"
+                                    android:paddingTop="@dimen/padding_xx_small"
+                                    android:paddingEnd="@dimen/padding_small"
+                                    android:paddingBottom="@dimen/padding_xx_small">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+
+                                        android:layout_width="22dp"
+                                        android:layout_height="22dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_image" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvAddDeleteThumbnail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/margin_small"
+                                        android:text="@string/add_thumbnail"
+                                        android:textColor="@color/primary_text_color"
+                                        android:textSize="@dimen/text_size_small"
+                                        app:fontFamily="@font/roboto" />
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/llAddYouTubeVideo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_default"
+                                    android:layout_marginTop="@dimen/margin_xx_small"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="0dp"
+                                    android:paddingTop="@dimen/padding_xx_small"
+                                    android:paddingEnd="@dimen/padding_small"
+                                    android:paddingBottom="@dimen/padding_xx_small">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_gravity="center"
+                                        app:srcCompat="@drawable/youtube" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+
+                                        android:id="@+id/tvAddDeleteYouTube"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/margin_small"
+                                        android:text="@string/add_youtube_video"
+                                        android:textColor="@color/primary_text_color"
+                                        android:textSize="@dimen/text_size_small"
+                                        app:fontFamily="@font/roboto" />
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+
+                                android:id="@+id/ivQuestionSetThumbnail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minWidth="@dimen/min_width_thumbnail"
+                                android:minHeight="@dimen/min_height_thumbnail"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:layout_marginBottom="@dimen/margin_small"
+                                android:adjustViewBounds="true"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/ic_user_default" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+
+                                android:id="@+id/etYouTubeLink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:layout_marginBottom="@dimen/margin_small"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/roboto"
+                                android:hint="@string/youtube_link"
+                                android:textColor="@color/primary_text_color"
+                                android:textColorHint="@color/grey"
+                                android:textSize="@dimen/text_size_large"
+                                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                                android:visibility="gone"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+
+                                android:id="@+id/llcYouTubeThumbnailAndTitleContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <com.google.android.youtube.player.YouTubeThumbnailView
+
+                                    android:id="@+id/youTubeThumbnailView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="centerCrop"
+                                    android:background="@color/light_grey"
+                                    android:visibility="visible"
+                                    android:layout_marginTop="@dimen/margin_small"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:id="@+id/tvYouTubeTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    tools:text="@tools:sample/lorem/random"
+                                    android:textColor="@color/grey"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_marginBottom="@dimen/margin_small"
+                                    android:maxLines="3"
+                                    app:fontFamily="@font/roboto"
+                                    android:lineSpacingExtra="@dimen/line_spacing_extra"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:id="@+id/ivQuestionSetOptions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingStart="@dimen/padding_extra_small"
+                            android:paddingTop="@dimen/padding_extra_small"
+                            android:paddingBottom="@dimen/padding_extra_small"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_option"
+                            tools:ignore="RtlSymmetry" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rvTemplateQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:itemCount="20">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

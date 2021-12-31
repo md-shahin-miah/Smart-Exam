@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/nav_enroll"
+        android:icon="@drawable/ic_participation_hands"
+        android:title="@string/participation" />
+    <item
+        android:id="@+id/nav_following"
+        android:icon="@drawable/ic_following"
+        android:title="@string/nav_following" />
+    <item
+        android:id="@+id/nav_my_qxm"
+        android:icon="@drawable/ic_qxm"
+        android:title="@string/nav_my_qxm" />
+    <item
+        android:id="@+id/nav_create_qxm"
+        android:icon="@drawable/ic_create"
+        android:title="@string/nav_create_qxm" />
+</menu>

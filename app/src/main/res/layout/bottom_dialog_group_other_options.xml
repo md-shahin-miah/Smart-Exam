@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_large"
+    android:orientation="vertical">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvGenerateQRCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/generate_qr_code" />
+
+
+        <TextView
+            android:id="@+id/tvCopyLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvGenerateQRCode"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/copy_link" />
+
+        <TextView
+            android:id="@+id/tvSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCopyLink"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/settings" />
+
+        <TextView
+            android:id="@+id/tvReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSettings"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/report" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

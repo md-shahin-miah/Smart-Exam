@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.fragments.loginActivityFragments.UserInterestAndPreferableLanguageInputFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChooseYourInterest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/choose_your_interests"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_xx_large"
+            app:fontFamily="@font/roboto_medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChooseAtLeastThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChooseYourInterest"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:paddingStart="@dimen/padding_medium"
+            android:paddingEnd="0dp"
+            android:text="@string/choose_at_least_three_interest"
+            app:fontFamily="@font/roboto_light" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvQxmCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChooseAtLeastThree"
+            android:scrollbars="horizontal" />
+
+        <View
+            android:id="@+id/viewSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rvQxmCategory"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="0dp"
+            android:background="@color/view_separator" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPreferableLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewSeparator"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/choose_your_preferable_language"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_xx_large"
+            app:fontFamily="@font/roboto_medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChoosePreferableLanguageHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPreferableLanguage"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:fontFamily="@font/roboto_light"
+            android:lineSpacingExtra="@dimen/line_spacing_large"
+            android:text="@string/add_your_preferred_language_by_tapping_the_following_button"
+            android:textColor="@color/secondary_text_color"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectedPreferableLanguages"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvChoosePreferableLanguageHint"
+            android:padding="@dimen/margin_medium"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_large"
+            app:fontFamily="@font/roboto"
+            tools:text="English, Bengali" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSelectedPreferableLanguages"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@drawable/button_background_border_blue"
+            android:drawableStart="@drawable/ic_plus_blue"
+            android:drawablePadding="@dimen/padding_small"
+            android:gravity="center"
+            android:paddingStart="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="@string/add_language"
+            android:textColor="@color/colorPrimary"
+            app:elevation="4dp"
+            app:fontFamily="@font/roboto" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+
+            android:id="@+id/llcDobAndGenderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/tvAddLanguage"
+            android:layout_margin="@dimen/margin_medium">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                app:fontFamily="@font/roboto_light"
+                android:layout_marginTop="@dimen/margin_medium"/>
+
+            <RadioGroup
+                android:id="@+id/rgUserGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+                    android:fontFamily="@font/roboto"
+                    app:buttonTint="@color/colorPrimary"/>
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"
+                    android:fontFamily="@font/roboto"
+                    app:buttonTint="@color/colorPrimary"/>
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/others"
+                    android:fontFamily="@font/roboto"
+                    app:buttonTint="@color/colorPrimary"/>
+            </RadioGroup>
+
+            <RelativeLayout
+
+                android:id="@+id/rlDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+
+                    android:id="@+id/tvDateOfBirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_of_birth"
+                    app:fontFamily="@font/roboto_light"
+                    android:layout_centerVertical="true"/>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:id="@+id/etUserDateOfBirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/provide_date_of_birth"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@+id/tvDateOfBirth"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    app:backgroundTint="@color/colorPrimary"
+                    android:focusable="false"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/rlMakeDobVisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlDateOfBirth"
+                android:layout_centerVertical="true">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+
+                    android:id="@+id/checkboxMakeDobPublic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:buttonTint="@color/colorPrimary"
+                    android:clickable="false"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+
+                    android:id="@+id/tvMakeAgePublic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/make_your_date_of_birth_visible_to_others"
+                    android:layout_toEndOf="@+id/checkboxMakeDobPublic"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llcDobAndGenderContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:background="@drawable/button_background"
+            android:paddingStart="@dimen/padding_extra_large"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_extra_large"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="@string/next"
+            app:elevation="@dimen/cardview_default_elevation"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            app:fontFamily="@font/roboto_medium"
+            app:backgroundTint="@color/colorPrimary"
+            />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+

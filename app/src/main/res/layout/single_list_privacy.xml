@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_small">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+
+            android:id="@+id/ivListPrivacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_privacy_public"
+            android:layout_gravity="center_vertical"
+            app:tint="@color/light_black"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:id="@+id/tvListPrivacyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/roboto"
+            tool:text="Public"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/light_black"
+            android:layout_marginStart="@dimen/margin_default"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:id="@+id/tvListPrivacyExplanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/anyone_can_view"
+        app:fontFamily="@font/roboto"
+        android:textColor="@color/light_black"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"
+        android:layout_marginTop="@dimen/margin_xx_small"/>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

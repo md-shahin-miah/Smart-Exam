@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="4dp"
+        app:contentPadding="4dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        android:layout_marginStart="@dimen/margin_extra_small"
+        android:layout_marginEnd="@dimen/margin_extra_small"
+        android:layout_marginBottom="@dimen/margin_extra_small">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvUserImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/users_profile_image"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_user_default" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUserFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        tools:text="Mridul Das"
+        android:maxLines="2"
+        android:lineSpacingExtra="@dimen/line_spacing_regular"
+        app:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/text_size_regular"
+        android:textColor="@color/primary_text_color"
+        android:ellipsize="end"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/cvUserImage"
+        android:layout_marginStart="@dimen/margin_small"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFollwoingNotification"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:padding="@dimen/padding_small"
+        android:src="@drawable/ic_following_notification" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

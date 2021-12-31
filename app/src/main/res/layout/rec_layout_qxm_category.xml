@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/qSetInterestCV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape"
+    android:layout_margin="2dp"
+
+
+>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#F4F4F4"
+        app:cardCornerRadius="4dp"
+        android:elevation="10dp"
+        app:cardUseCompatPadding="true"
+        >
+
+        <RelativeLayout
+
+            android:id="@+id/interestMainContent"
+            android:layout_width="94dp"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/selQInterestIV"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_check"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone"
+                android:background="#747474"
+                android:contentDescription="@string/content_description_category_item" />
+
+            <TextView
+                android:id="@+id/qSetInterestTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Professional or Training Exam"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="#746d6d"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlOccupationContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    >
+
+        <ImageView
+            android:id="@+id/ivIconOccupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_briefcase"/>
+
+        <LinearLayout
+
+            android:id="@+id/llOccupationDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toStartOf="@+id/ivEditOccupation"
+            android:layout_toEndOf="@+id/ivIconOccupation">
+
+            <TextView
+                android:id="@+id/tvOccupationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_regular"
+                app:fontFamily="@font/roboto"
+                tools:text="Engineer "/>
+
+            <TextView
+                android:id="@+id/tvOrganizationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondary_text_color"
+                tools:text="Cybernatics Robo Academy"/>
+
+            <TextView
+                android:id="@+id/tvWorkDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/secondary_text_color"
+                tools:text="2005-2007"
+                />
+
+        </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivEditOccupation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_small"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/ic_pencil"
+        />
+
+
+    </RelativeLayout>
+
+
+
+
+

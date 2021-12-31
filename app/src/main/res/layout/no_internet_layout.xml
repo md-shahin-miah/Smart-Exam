@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingBottom="@dimen/padding_extra_large"
+    android:background="@color/recycler_view_background_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_no_internet"
+        android:padding="@dimen/padding_default"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_internet_found"
+        android:gravity="center"
+        app:fontFamily="@font/roboto"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/text_size_regular"
+        android:padding="@dimen/padding_default"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRetry"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:gravity="center"
+        android:text="@string/retry"
+        android:background="@drawable/button_background_border_only"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/text_size_regular"
+        android:textColor="@color/title_text_color"
+        android:layout_margin="@dimen/margin_default"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

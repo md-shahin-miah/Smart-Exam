@@ -1,0 +1,36 @@
+{
+  "feedData": {
+    "_id": "5c2c9f2dba43d13168619f10",
+    "correctAnswerVisibilityDate": "instantly",
+    "qxmCurrentStatus": "running",
+    "questionVisibility": "after_participation",
+    "feedDescription": "",
+    "feedCreatorImageURL": "https://lh3.googleusercontent.com/-IrJQRkwCIKc/AAAAAAAAAAI/AAAAAAAAAAA/AKxrwcZt6Od3ZfexsoWafElZxHQA8T1iTg/s300-c/photo.jpg",
+    "feedCreatorName": "CRUX APP",
+    "feedCreationTime": "1546428205062",
+    "feedPrivacy": "public",
+    "feedTitle": "test with negative marks",
+    "feedOwner": "5c2c9326f2d38126e43b3d29",
+    "feedQxmId": "5c2c9f2dba43d13168619f0f",
+    "feedType": "published",
+    "isContestModeOn": false,
+    "feedShareQuantity": 0,
+    "feedIgniteQuantity": 0,
+    "feedCategory": [
+      "Fun"
+    ],
+    "feedParticipantsQuantity": 0,
+    "enrollStatus": false,
+    "feedSingleMultiOptions": [],
+    "editedFlag": false,
+    "feedEnrollAcceptedCount": 0,
+    "feedEnrollPendingCount": 0,
+    "isClickedIgnited": false,
+    "isParticipated": false,
+    "isEnrollPending": false,
+    "isEnrollAccepted": false
+  },
+  "qxmStartScheduleDate": "instantly",
+  "qxmCurrentStatus": "running",
+  "negativePoints": 1
+}

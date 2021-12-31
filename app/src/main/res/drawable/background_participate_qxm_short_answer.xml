@@ -1,0 +1,11 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:thickness="0dp">
+
+    <solid
+        android:color="@color/background_short_answer">
+    </solid>
+    <corners
+        android:radius="5dp">
+    </corners>
+</shape>
+

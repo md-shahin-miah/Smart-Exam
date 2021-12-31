@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small"
+            android:text="@string/choose_your_preferred_languages"
+            android:textColor="@color/primary_text_color"
+            app:fontFamily="@font/roboto_medium" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPreferableLanguages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_default"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="@string/ok"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_large"
+            app:fontFamily="@font/roboto_bold"
+
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>
+

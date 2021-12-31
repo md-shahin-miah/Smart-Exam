@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlInstitutionContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/iconInstIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:tint="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_institution"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_toStartOf="@+id/iconEditInstIV"
+        android:layout_toEndOf="@+id/iconInstIV"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nameInstTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_regular"
+            app:fontFamily="@font/roboto"
+            tools:text="@tools:sample/lorem"/>
+
+        <TextView
+            android:id="@+id/fieldOfStudyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/text_size_regular"
+            tools:text="Computer Science and engineering"
+            />
+
+        <TextView
+            android:id="@+id/degreeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/text_size_regular"
+            tools:text="B.Sc"
+            />
+
+        <TextView
+            android:id="@+id/gradeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/text_size_regular"
+            tools:text="First class"
+            />
+
+        <TextView
+            android:id="@+id/passYearTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/text_size_regular"
+            tools:text="2009"
+            />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iconEditInstIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_small"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/ic_pencil" />
+
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_extra_small"
+            android:layout_marginEnd="@dimen/margin_extra_small"
+            android:layout_marginBottom="@dimen/margin_extra_small"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="4dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llSingleFeedItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvUserImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardBackgroundColor="@color/extra_light_grey"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivUserImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:contentDescription="@string/users_profile_image"
+                            android:focusable="true"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/ic_user_default" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_xx_small">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivFeedPrivacy"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/margin_small"
+                            app:srcCompat="@drawable/ic_lock" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFeedPrivacy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:layout_toEndOf="@id/ivFeedPrivacy"
+                            android:text="@string/private_qxm"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_large"
+                            app:fontFamily="@font/roboto_medium" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:id="@+id/ivFeedOptions"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/padding_extra_small"
+                            app:srcCompat="@drawable/ic_option" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llMainText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvFeedPrivacy"
+                            android:layout_marginStart="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_marginEnd="@dimen/margin_small"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMainText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:lineSpacingExtra="@dimen/line_spacing_regular"
+                                android:paddingEnd="@dimen/margin_extra_small"
+                                android:textColor="@color/primary_text_color"
+                                android:textSize="@dimen/text_size_regular"
+                                app:fontFamily="@font/roboto"
+                                tools:text="Nabil Physics wants to participate your private qxm A Qxm about Fish Finger Recipe" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivQxmThumbnail"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginEnd="@dimen/margin_small"
+                                android:layout_weight="0.5"
+                                tools:src="@drawable/sample_image" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNotificationTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llMainText"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/text_size_small"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/just_now"
+                            android:textColor="@color/secondary_text_color"
+                            android:textSize="@dimen/text_size_medium"
+                            app:fontFamily="@font/roboto" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAcceptRequest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvNotificationTime"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="@dimen/padding_medium"
+                            android:paddingTop="@dimen/margin_small"
+                            android:paddingEnd="@dimen/padding_medium"
+                            android:paddingBottom="@dimen/margin_small"
+                            android:text="@string/accept"
+                            android:textColor="@color/btn_text_color_blue"
+                            android:textSize="@dimen/text_size_large"
+                            app:fontFamily="@font/roboto_medium" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRejectRequest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llMainText"
+                            android:layout_alignBaseline="@+id/tvAcceptRequest"
+                            android:layout_marginStart="@dimen/margin_medium"
+                            android:layout_marginEnd="@dimen/margin_medium"
+                            android:layout_toEndOf="@+id/tvAcceptRequest"
+                            android:paddingStart="@dimen/padding_medium"
+                            android:paddingTop="@dimen/padding_small"
+                            android:paddingEnd="@dimen/padding_medium"
+                            android:paddingBottom="@dimen/padding_small"
+                            android:text="@string/reject"
+                            android:textColor="@color/icon_color_gray"
+                            android:textSize="@dimen/text_size_large"
+                            app:fontFamily="@font/roboto_medium" />
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/CVContest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/red"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="1dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-4dp"
+                android:paddingStart="@dimen/padding_medium"
+                android:paddingEnd="@dimen/padding_medium"
+                android:text="@string/contest"
+                android:textColor="@color/white"
+                app:fontFamily="@font/roboto_bold"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

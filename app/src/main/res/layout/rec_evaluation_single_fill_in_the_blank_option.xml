@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_extra_small"
+    android:background="@drawable/background_evaluation_fill_in_the_blanks_option">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:id="@+id/tvFillInTheBlanksOptionSerial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_extra_small"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:fontFamily="@font/roboto"
+            android:text="(a)"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_regular" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:id="@+id/tvFillInTheBlanksAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_regular"
+            tools:text="@string/fill_the_blank_options" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnWrongAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical|end"
+        android:layout_toStartOf="@+id/btnCorrectAnswer"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        android:alpha="0.5"
+        android:src="@drawable/ic_wrong_answer" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnCorrectAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical|end"
+        android:padding="0dp"
+        android:alpha="0.5"
+        android:src="@drawable/ic_correct_answer" />
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:layout_marginStart="@dimen/margin_extra_small"
+    android:layout_marginEnd="@dimen/margin_extra_small"
+    android:layout_marginBottom="@dimen/margin_extra_small"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="4dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQxmRemoved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/tvUndo"
+            android:padding="@dimen/padding_medium"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_large"
+            app:fontFamily="@font/roboto_bold"
+            tools:text="@string/poll_removed" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUndo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/undo"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_regular"
+            app:fontFamily="@font/roboto_bold" />
+
+        <!-- <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tvTellUsWhy"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentEnd="true"
+             android:background="?attr/selectableItemBackgroundBorderless"
+             android:padding="@dimen/padding_medium"
+             android:text="@string/tell_us_why"
+             android:textColor="@color/colorPrimary"
+             android:textSize="@dimen/text_size_regular"
+             app:fontFamily="@font/roboto_bold" />-->
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

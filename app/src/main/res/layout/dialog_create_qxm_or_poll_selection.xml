@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingBottom="@dimen/padding_medium"
+        android:text="@string/create_a_new_qxm_or_poll"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large"
+        app:fontFamily="@font/roboto_medium" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/padding_default"
+        android:text="@string/please_tap_a_button_inorder_to_create_a_qxm_or_poll"
+        android:textColor="@color/primary_text_color"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        app:fontFamily="@font/roboto_medium" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCreateQxm"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background_border_blue"
+        android:text="@string/create_a_qxm"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:fontFamily="@font/roboto_bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="@string/or"
+        android:gravity="center"
+        android:textColor="@color/primary_text_color"
+        android:textSize="@dimen/text_size_regular"
+        app:fontFamily="@font/roboto" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCreatePoll"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:background="@drawable/button_background_border_blue"
+        android:text="@string/create_a_poll"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:fontFamily="@font/roboto_bold" />
+</androidx.appcompat.widget.LinearLayoutCompat>

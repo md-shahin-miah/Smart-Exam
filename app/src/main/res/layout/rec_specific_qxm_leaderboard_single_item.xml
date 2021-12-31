@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_extra_small"
+        android:layout_marginEnd="@dimen/margin_extra_small"
+        android:layout_marginBottom="@dimen/margin_extra_small"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--profile pic-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvUserImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/margin_xx_small"
+                android:layout_marginTop="@dimen/margin_xx_small"
+                android:layout_marginBottom="@dimen/margin_xx_small"
+                app:cardBackgroundColor="@color/extra_light_grey"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivUserImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="@string/users_profile_image"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_user_default" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUserFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_xx_small"
+                android:layout_toEndOf="@+id/cvUserImage"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_medium"
+                tools:text="#1 Mridul Das" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAchievedPointsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserFullName"
+                android:layout_alignStart="@+id/tvUserFullName"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/achieved_points"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size_regular"
+                app:fontFamily="@font/roboto_medium"
+
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAchievedPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvAchievedPointsTitle"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_xx_small"
+                android:layout_toEndOf="@+id/tvAchievedPointsTitle"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="@dimen/text_size_regular"
+                app:fontFamily="@font/roboto"
+                tools:text="10 points" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAchievedPointsInPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvAchievedPoints"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:textColor="@color/title_text_color"
+                app:fontFamily="@font/roboto_medium"
+                tools:text="100%" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAchievedPointsTitle"
+                android:layout_alignStart="@+id/tvAchievedPointsTitle"
+                android:layout_marginTop="@dimen/margin_xx_small"
+                android:layout_marginBottom="@dimen/margin_xx_small"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivTimelapse"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/tvAchievedPointsTitle"
+                    android:layout_alignStart="@+id/tvAchievedPointsTitle"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_timelapse_grey"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTimeTaken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_gravity="center_vertical"
+                    tools:text="2 min 06 sec" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

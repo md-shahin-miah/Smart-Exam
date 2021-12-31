@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_default">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/share_qxm"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/text_size_extra_large"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_group_list"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/title_text_color"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textSize="@dimen/text_size_regular"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rvMyGroupList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default"
+        tools:listitem="@layout/recycler_view_item_3"
+        android:visibility="visible">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <FrameLayout
+        android:id="@+id/flLoader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true"
+            android:progressDrawable="@color/colorPrimary"
+            android:layout_marginTop="@dimen/margin_default"
+            android:visibility="visible"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNotFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_default"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

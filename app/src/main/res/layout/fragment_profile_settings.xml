@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".views.fragments.userProfileActivityFragments.ProfileSettingsFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_home_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-16dp"
+                app:title="Qxm">
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBackArrow"
+                        android:layout_width="42dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/back_arrow"
+                        android:padding="@dimen/padding_medium"
+                        app:srcCompat="@drawable/ic_back_arrow" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivBackArrow"
+                        android:gravity="center_horizontal"
+                        android:text="@string/toolbar_title_profile_setttings"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_size_xx_large"
+                        app:fontFamily="@font/roboto_medium" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account"
+        app:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/text_size_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_extra_small"
+        android:textColor="@color/text_color_deep_gray"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:background="@color/view_separator"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llUpdatePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_password"
+            android:layout_marginStart="@dimen/margin_large"
+            android:paddingTop="@dimen/padding_small"
+            app:fontFamily="@font/roboto"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/text_color_deep_gray"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_your_sign_in_password"
+            android:layout_marginStart="@dimen/margin_large"
+            app:fontFamily="@font/roboto"
+            android:paddingBottom="@dimen/padding_small"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/text_color_deep_gray"
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:background="@color/view_separator"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llAccountStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_status"
+            android:layout_marginStart="@dimen/margin_large"
+            android:paddingTop="@dimen/padding_small"
+            app:fontFamily="@font/roboto"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/text_color_deep_gray"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tap_here_to_check_your_account_status"
+            android:layout_marginStart="@dimen/margin_large"
+            app:fontFamily="@font/roboto"
+            android:paddingBottom="@dimen/padding_small"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/text_color_deep_gray"
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:background="@color/view_separator"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llLoginDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loggedin_devices"
+            android:layout_marginStart="@dimen/margin_large"
+            android:paddingTop="@dimen/padding_small"
+            app:fontFamily="@font/roboto"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/text_color_deep_gray"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/devices_that_have_been_active_on_your_account_or_are_currently_signed_in"
+            android:layout_marginStart="@dimen/margin_large"
+            app:fontFamily="@font/roboto"
+            android:paddingBottom="@dimen/padding_small"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/text_color_deep_gray"
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:background="@color/view_separator"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:layout_marginStart="@dimen/margin_large"
+            android:paddingTop="@dimen/padding_default"
+            app:fontFamily="@font/roboto"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_large"
+            android:paddingBottom="18dp"
+            android:textColor="@color/text_color_deep_gray"
+            />
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:background="@color/view_separator"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

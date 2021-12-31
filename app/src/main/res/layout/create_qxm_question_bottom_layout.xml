@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rvQuestionBottomLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+
+        android:id="@+id/etPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_light_blue"
+        android:gravity="center_horizontal"
+        android:hint="@string/points"
+        android:inputType="number"
+        android:maxLength="@integer/maxLengthPoint"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_extra_small"
+        android:paddingEnd="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_extra_small"
+        android:textSize="@dimen/text_size_small"
+        tools:ignore="RtlSymmetry" />
+
+    <View
+        android:id="@+id/viewDivision"
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_toEndOf="@+id/etPoints"
+        android:background="@color/grey"
+        tools:ignore="RtlHardcoded" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+
+        android:id="@+id/etWordLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/viewDivision"
+        android:background="@drawable/background_light_blue"
+        android:gravity="center_horizontal"
+        android:hint="@string/character_limit"
+        android:inputType="number"
+        android:maxLength="@integer/maxLengthCharacterLimitInCreateQxm"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_extra_small"
+        android:paddingEnd="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_extra_small"
+        android:textSize="@dimen/text_size_small" />
+
+
+    <androidx.appcompat.widget.SwitchCompat
+
+        android:id="@+id/switchRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/roboto_light"
+        android:padding="@dimen/padding_extra_small"
+        android:text="@string/required"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="gone"
+        app:switchPadding="@dimen/padding_small"
+        tools:ignore="RelativeOverlap" />
+
+
+</RelativeLayout>

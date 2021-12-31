@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.fragments.EvaluateQxmFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_home_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-16dp"
+                app:title="Qxm">
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBackArrowEvaluateQxm"
+                        android:layout_width="42dp"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/padding_medium"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/back_arrow"
+                        app:srcCompat="@drawable/ic_back_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivBackArrowEvaluateQxm"
+                        android:gravity="center_horizontal"
+                        android:text="@string/evaluate_qxm"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_size_xx_large"
+                        app:fontFamily="@font/roboto_medium" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="5dp"
+                app:elevation="5dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_small">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/participants_details"
+                        android:textColor="@color/secondary_text_color"
+                        android:textSize="@dimen/text_size_regular"
+                        app:fontFamily="@font/roboto" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/content_margin"
+                        android:layout_marginStart="@dimen/content_margin"
+                        android:layout_marginTop="@dimen/margin_default"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvUserImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivUserImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:clickable="true"
+                                android:contentDescription="@string/users_profile_image"
+                                android:focusable="true"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/ic_user_default" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llParticipants"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/margin_medium"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:id="@+id/tvParticipantName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/margin_extra_large"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size_large"
+                                    app:fontFamily="@font/roboto_medium"
+                                    tools:text="Nabil Physics" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:id="@+id/tvParticipationDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:clickable="true"
+                                    android:ellipsize="end"
+                                    android:focusable="true"
+                                    android:maxWidth="240dp"
+                                    tools:text="Participated on 3rd May 2018"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size_small"
+                                    app:fontFamily="@font/roboto" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_below="@+id/llParticipants"
+                                android:layout_marginTop="@dimen/margin_extra_small"
+                                android:background="@drawable/style_bar" />
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_alignParentEnd="true">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/experience_background_style" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvUserExperience"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_xx_large"
+                                    app:fontFamily="@font/roboto_bold"
+                                    tools:text="36"
+
+                                    />
+
+                            </FrameLayout>
+
+
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/observation_colon"
+                        android:textColor="@color/secondary_text_color"
+                        android:textSize="@dimen/text_size_regular"
+                        app:fontFamily="@font/roboto" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_extra_small"
+                        android:background="@drawable/background_light_blue"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingEnd="@dimen/padding_default"
+                        android:paddingStart="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/answered_points"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_regular" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAnsweredPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_extra_small"
+                            android:fontFamily="@font/roboto"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_regular"
+                            tools:text="15" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_extra_small"
+                        android:background="@drawable/background_light_blue"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingEnd="@dimen/padding_default"
+                        android:paddingStart="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/time_taken"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_regular" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTimeTaken"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_extra_small"
+                            android:fontFamily="@font/roboto"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_regular"
+                            tools:text="3 min 02 sec" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:layout_marginBottom="@dimen/margin_default"
+                app:cardElevation="5dp"
+                app:elevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlQxmSetInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingEnd="@dimen/padding_default"
+                    android:paddingStart="@dimen/padding_default"
+                    android:paddingTop="@dimen/padding_small">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTotalTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_regular"
+                        android:visibility="visible"
+                        app:fontFamily="@font/roboto"
+                        tools:text="Total Time: 1:30 hr" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTotalPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/primary_text_color"
+                        android:layout_alignEnd="@+id/tvTotalTime"
+                        android:textSize="@dimen/text_size_regular"
+                        app:fontFamily="@font/roboto"
+                        tools:ignore="RelativeOverlap"
+                        tools:text="Total Points: 15" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvQxmTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/tvTotalTime"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_extra_large"
+                        app:fontFamily="@font/roboto_bold"
+                        tools:text="Java Quiz"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivQuestionImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvQxmTitle"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/semi_transparent"
+                        android:minWidth="@dimen/min_width_thumbnail"
+                        android:minHeight="@dimen/min_height_thumbnail"
+                        android:visibility="gone"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        tools:src="@drawable/sample_image" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvQxmDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivQuestionImage"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_regular"
+                        app:fontFamily="@font/roboto"
+                        tools:text="This quiz provides Multiple Choice Questions (MCQs) related to Core Java. Result of this exam is given after submission of your..." />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEvaluateQxm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        >
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitEvaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/btn_background_white"
+        android:drawablePadding="@dimen/padding_medium"
+        android:drawableStart="@drawable/ic_check_blue"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingStart="@dimen/padding_default"
+        android:text="@string/submit"
+        android:textColor="@color/primary_text_color"
+        android:textSize="@dimen/text_size_regular"
+        app:elevation="4dp"
+        app:fontFamily="@font/roboto_medium" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

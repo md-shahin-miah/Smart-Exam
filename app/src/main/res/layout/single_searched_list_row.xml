@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMyGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/padding_small"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusable="true">
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvListName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="My Awesome List"
+        app:fontFamily="@font/roboto_bold"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/text_size_large"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvListPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Public"
+        android:layout_below="@+id/tvListName"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        app:fontFamily="@font/roboto"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/secondary_text_color"
+        android:drawableStart="@drawable/ic_privacy_public"
+        android:drawablePadding="@dimen/padding_small"/>
+
+</RelativeLayout>

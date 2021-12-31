@@ -1,0 +1,1107 @@
+<resources>
+    <string name="app_name">QXM</string>
+    <string name="version_code">1.0.20</string>
+    <string name="version_variant">alpha</string>
+    <!-- Facebook  -->
+    <string name="facebook_app_id">993330330873647</string>
+    <string name="fb_login_protocol_scheme">fb993330330873647</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="upload">Upload</string>
+    <string name="before_you_get_started">Before you get started\nLet\'s make sure you Look Better</string>
+    <string name="hi_Test_Name">Hi, Test Name</string>
+    <string name="upload_a_profile_picture_n_optional">Upload a profile picture (optional)</string>
+    <string name="forget_your_password">Forget Your Password?</string>
+    <string name="or_sign_in_with">Or sign in with</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="dummy_email">example@email.com</string>
+    <string name="dummy_password">*******</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="btn_continue">SIGN UP</string>
+    <string name="or_sign_up_with">Or Sign up with</string>
+    <string name="continue_next">CONTINUE</string>
+    <string name="login">LOGIN</string>
+
+
+    <!--social login credential-->
+
+    <!--google login client ID-->
+    <string name="google_login_client_id">48109182036-9lkp933clvsg69klfbmat8l8lcppe60l.apps.googleusercontent.com</string>
+    <!--    <string name="google_login_client_id">759357951209-8j6kas47q4mgsvbltedk1pcp9u4tsdbi.apps.googleusercontent.com</string>-->
+
+    <string name="nav_home">Home</string>
+    <string name="nav_enroll">Enroll</string>
+    <string name="nav_following">Following</string>
+    <string name="nav_my_qxm">My Qxm</string>
+    <string name="nav_create_qxm">Create</string>
+    <string name="app_bar_item_search">Search</string>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="users_profile_image">Users\' profile image</string>
+    <string name="notification_icon">Notification icon</string>
+    <string name="drawer_toggle">Drawer toggle</string>
+    <string name="search_icon">Search icon</string>
+    <string name="my_qxm">My Qxm</string>
+    <string name="following">Following</string>
+    <string name="qxms">Qxms</string>
+    <string name="details">Details</string>
+
+    <!--navigation drawer message-->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="notification">Notification</string>
+    <string name="evaluate_qxm">Evaluate Qxm</string>
+    <string name="result">Result</string>
+    <string name="activity_log">Activity Log</string>
+    <string name="followers">Followers</string>
+    <string name="groups">Groups</string>
+    <string name="private_qxm">Private Qxm</string>
+    <string name="my_enrollment">My Enrollment</string>
+    <string name="user_full_name">Mridul Das</string>
+    <string name="goto_profile">Profile</string>
+    <string name="qxm_group">Qxm Group</string>
+    <string name="settings">Settings</string>
+    <string name="reportabug">Report a Bug</string>
+    <string name="give_feedback">Give Feedback</string>
+    <string name="terms_amp_privacy_policy"><![CDATA[Terms &  Privacy Policy]]></string>
+    <string name="help_amp_support"><![CDATA[Help & Support]]></string>
+    <string name="app_intro">Intro Tutorial</string>
+    <string name="logout">Logout</string>
+    <string name="sample_feed">A Qxm about Fish Finger Recipe</string>
+    <string name="sample_time_in_day">2 days ago</string>
+    <string name="sample_participants_number">420 Participants</string>
+
+    <!-- edit user profile -->
+
+    <string name="edit_info">Edit Info</string>
+    <string name="basic">Basic</string>
+    <string name="location_text">You from</string>
+    <string name="country_name">Country</string>
+    <string name="country_name_value">Bangladesh</string>
+    <string name="living_address">Address</string>
+    <string name="living_address_value">26/4 Fazilchist,Subid Bazar,Sylhet</string>
+    <string name="interest_name">Sports</string>
+    <string name="social_link">facebook.com/frshafi</string>
+    <string name="occupation_name">Teacher</string>
+
+    <string name="instituite_fix_name">Institution</string>
+    <string name="degree_fix_name">Degree</string>
+    <string name="grade_fix_name">Grade</string>
+    <string name="field_of_study_fix_name">Field of Study</string>
+    <string name="passing_year_fix_name">Duration of Study</string>
+    <string name="from">From</string>
+    <string name="from_text">2005</string>
+    <string name="to">To</string>
+    <string name="to_text">2007</string>
+    <string name="unfollow">unfollow</string>
+
+    <!-- bottom dialog texts -->
+    <string name="edit_website_fixed">New website link</string>
+    <string name="choose_social_text">Choose Social</string>
+    <string name="add_social_text">Add Link</string>
+    <string name="social_address_text">frshafi49</string>
+    <string name="basic_hint_info">Basic Hint Info</string>
+    <string name="desc_fixed">Description</string>
+    <string name="description_text">This is Fozle Rabbi Shafi. I live in Sylhet. This is Fozle Rabbi Shafi. I live in Sylhet. This is Fozle Rabbi Shafi. I live in Sylhet.This is Fozle Rabbi Shafi. I live in Sylhet.This is Fozle Rabbi Shafi. I live in Sylhet.This is Fozle Rabbi Shafi. I live in Sylhet.This is Fozle Rabbi Shafi. I live in Sylhet.vvvThis is Fozle Rabbi Shafi. I live in Sylhet.This is Fozle Rabbi Shafi. I live in Sylhet.</string>
+    <string name="first_name_fixed">First name</string>
+    <string name="middle_name_fixed">Middle name</string>
+    <string name="last_name_fixed">Last name</string>
+    <string name="full_name">Full Name</string>
+    <string name="username_fixed">Username</string>
+    <string name="email_fixed">Email</string>
+    <string name="bio_fixed_name">Bio</string>
+    <string name="website_address_text">www.shafinew.com</string>
+    <string name="edit_social_fixed">New Facebbok Link</string>
+    <string name="bio_text">I am a programmer and I love programming very much</string>
+    <string name="contest">Contest</string>
+    <string name="number">125</string>
+    <string name="ignite">Ignite</string>
+    <string name="ignited">Ignited</string>
+    <string name="share">Share</string>
+    <string name="shared">Shared</string>
+    <string name="share_to_group">Share to group</string>
+    <string name="share_with_others">Share with others</string>
+    <string name="add_to_list">Add to list</string>
+    <string name="save_as">Save as</string>
+    <string name="participants"> Participants</string>
+    <string name="participant"> Participant</string>
+    <string name="permission_read_storage_rationale">Storage read permission is needed to pick files</string>
+    <string name="label_select_picture">Select Picture</string>
+    <string name="toast_cannot_retrieve_selected_image">Can not retrieve selected image</string>
+    <string name="toast_cannot_retrieve_cropped_image">Can not retrieve cropped image</string>
+    <string name="toast_unexpected_error">Unexpected error</string>
+    <string name="permission_title_rationale">Permission needed</string>
+    <string name="label_ok">OK</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="permission_write_storage_rationale">Storage write permission is needed to save the image</string>
+    <string name="uploading">Uploading</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="multiple_choice_option">Option 1</string>
+    <string name="fill_the_blank_options">answer to question</string>
+    <string name="add_question">Add Question</string>
+    <string name="untitled_question_set_name">Untitled question set name</string>
+    <string name="question_set_description">Question set description</string>
+    <string name="untitled_question">Untitled question</string>
+    <string name="multiple_choice_add_option">add option</string>
+    <string name="write_your_question_and_insert_blank">Write your question and press insert blank to put a  blank</string>
+    <string name="insert_blank">Insert Blank</string>
+    <string name="answers">Answers</string>
+    <string name="write_a_question">Write a question</string>
+    <string name="character_limit">Character limit</string>
+    <string name="required">Required</string>
+    <string name="create_question">Create Question</string>
+    <string name="points">Points</string>
+
+    <string-array name="question_type_array">
+        <item>Multiple Choice</item>
+        <item>Fill in The Blank</item>
+        <item>Short Answer</item>
+    </string-array>
+
+    <string-array name="category">
+        <item>
+
+        </item>
+
+
+    </string-array>
+
+    <!--qxm settings -->
+    <string name="this_qxm_is_for">This qxm is for:</string>
+    <string name="add_code_or_csv_file">add code or csv file</string>
+    <string name="answer_submission_deadline">Answer submission deadline</string>
+    <string name="content_description_category_item">Category Item</string>
+    <string name="philosophy">Philosophy</string>
+    <string name="action_bar_title_qxm_settings">QXM Settings</string>
+    <string name="title_qxm_category">Question Category</string>
+    <string name="hint_qxm_category">Choose a category that suit best with this question</string>
+    <string name="title_qxm_time">QXM Time</string>
+    <string name="title_exam_time">Exam time:</string>
+    <string name="dummy_exam_time">0 hours 00 minutes</string>
+    <string name="title_qxm_privacy">Question Privacy</string>
+    <string name="title_qxm_will_be_visible">Question will be visible</string>
+    <string name="after_participation">After participation</string>
+    <string name="before_participation">Before participation</string>
+    <string name="title_qxm_start_schedule">Exam Start Schedule</string>
+    <string name="instantly">Instantly</string>
+    <string name="start_when_clicked_manual_start">Start when clicked/manual start</string>
+    <string name="title_qxm_evaluation">QXM Evaluation</string>
+    <string name="automatic">Automatic</string>
+    <string name="manual">Manual</string>
+    <string name="semi_automatic">Semi-automatic</string>
+    <string name="title_qxm_expiration">Exam Expiration</string>
+    <string name="negative_marking_for_multiple_choice_question">Negative Marking</string>
+    <string name="negative_points_for_each_question">Negative points for each question</string>
+    <string name="negative_mark_1">1.0</string>
+    <string name="contest_mode">Contest Mode</string>
+    <string name="immediately_after_publish">Immediately after publish</string>
+    <string name="choose_date_and_time"><![CDATA[Choose Date & Time]]></string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="when_exam_duration_ends">When exam duration ends</string>
+    <string name="winner_selection_rule">Winner Selection Rule *</string>
+    <string name="winner_can_see_your_email_address">Winner can see your email address</string>
+    <string name="number_of_winners">Number of Winners</string>
+    <string name="raffle_draw_is_not_recommended_as_1st_priority">Raffle draw is not recommended as 1st Priority</string>
+    <string name="participation_expiration">Participation Expiration</string>
+    <string name="people_can_t_participate_after_contest_ends">People can\'t participate after contest ends</string>
+    <string name="people_can_participate_after_contest_end">People can participate after contest end, but will not be part of the contest winner</string>
+    <string name="correct_answer_visibility_with_marks">Correct Answer Visibility with Marks</string>
+    <string name="when_contest_ends">When contest ends</string>
+    <string name="immediately_after_answer_submission_by_participant">Immediately after answer submission by participant</string>
+    <string name="leaderboard_publish_time">Leaderboard Publish Time</string>
+    <string name="if_contest_evaluation_mode_is_not_automatic_then_the_correct_answer_will_be_visible_after_evaluation_done">If contest evaluation mode is not automatic then the correct answer will be visible after evaluation done</string>
+    <string name="continuous_update">Continuous update</string>
+    <string name="always_update_leader_board_on_participant_s_performance">Always update Leader Board on participant\'s performance</string>
+    <string name="leaderboard_privacy">Leaderboard Privacy</string>
+    <string name="participants_can_see_their_own_position_only">Participants can see their own position only</string>
+    <string name="public_everyone_can_see">Public (Everyone can see)</string>
+    <string name="save_as_draft">SAVE AS DRAFT</string>
+    <string name="publish">PUBLISH</string>
+    <string name="show_result_after_the_qxm_expire_date">Show result after the qxm expire date</string>
+    <string name="when_qxm_expires">When qxm expires</string>
+    <string name="if_qxm_has_expiration_date_you_can_use_this_option">If qxm has expiration date, you can use this option</string>
+    <string name="add_youtube_link">Add YouTube Link</string>
+    <string name="choose_category">Choose Category</string>
+    <string name="duplicate_item">Duplicate Item</string>
+    <string name="remove">Remove</string>
+    <string name="add_description">Add Description</string>
+    <string name="add_hidden_description">Add Hidden Description</string>
+    <string name="add_tags">Add Tags</string>
+    <string name="question_overview">Question Overview</string>
+    <string name="multiple_choice">Multiple Choice</string>
+    <string name="write_your_answer_here">Write your answer here…</string>
+    <string name="short_answer">Short Answer</string>
+    <string name="fill_in_the_blanks">Fill In The Blanks</string>
+    <string name="submit">Submit</string>
+    <string name="settings_enroll_hint">Enrollment creates an extra step to participate your Qxm. Each participant has to be approved by you in order to participate in the Qxm.</string>
+    <string name="enroll">Enroll</string>
+    <string-array name="exam_time_type_list">
+        <item>No Time Limit</item>
+        <item>Limited Time</item>
+    </string-array>
+
+    <string-array name="qxm_privacy_list">
+        <item>Public</item>
+        <item>Private</item>
+    </string-array>
+
+    <string-array name="raffle_priority">
+        <item>Marks</item>
+        <item>Quick Submission</item>
+        <item>Raffle Draw</item>
+    </string-array>
+
+    <!-- Question Overview -->
+    <string name="see_result_caps_word">SEE RESULT</string>
+    <string name="see_result">See Result</string>
+    <string name="not_defined">Not defined</string>
+    <string name="you_can_not_participate_in_your_own_qxm">You can not participate in your own Qxm</string>
+    <string name="you_can_not_enroll_in_your_own_qxm">You can not enroll in your own Qxm</string>
+
+    <!-- Qxm Participation -->
+    <string name="total_time_unlimited">Total Time: unlimited</string>
+    <string name="unlimited">Unlimited</string>
+    <string name="qxm_start_instantly_message">Available for participation</string>
+    <string name="qxm_start_manual_message">The Exam has not been started yet.</string>
+    <string name="it_is_not_defined_by_qxm_creator">It is not defined by Qxm creator</string>
+    <string name="answered_points">Answered Points:</string>
+    <string name="time_taken">Time taken:</string>
+    <string name="participants_details">Participants Details</string>
+    <string name="back_arrow">Back Arrow</string>
+    <string name="enroll_now">Enroll Now</string>
+    <string name="participate_now">Participate Now</string>
+    <string name="enroll_request_pending">ENROLL REQUEST PENDING</string>
+    <string name="privacy">Privacy :</string>
+    <string name="category">Category:</string>
+    <string name="science_technology">Science,Technology</string>
+    <string name="total_time">Total Time:</string>
+    <string name="total_points">Total Points:</string>
+    <string name="points_numeric">15</string>
+    <string name="hours_ago">2 hours ago</string>
+    <string name="privacy_public">Public</string>
+    <string name="questions">Questions</string>
+    <string name="demo_time">1:30 hr</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="clear_search_history">Clear search history</string>
+    <string name="total_participants">Total Participants:</string>
+    <string name="view_all">View All</string>
+    <string name="total_pending_evaluation">Total Pending Evaluation:</string>
+    <string name="see_question">See Question</string>
+    <string name="observation">Observation</string>
+    <string name="result_summary">Result Summary</string>
+    <string name="position">Position:</string>
+    <string name="achieved_points">Achieved Points:</string>
+    <string name="total_correct_mcq">Total correct MCQ:</string>
+    <string name="total_correct_fill_in_the_blanks">Total correct Fill in The Blanks:</string>
+    <string name="review_again">Review Again</string>
+    <string name="done">Done</string>
+    <string name="result_summary_toolbar_title">Result Summary</string>
+    <string name="full_result">Full Result</string>
+    <string name="total_correct_short_answer">Total correct Short Answer:</string>
+    <string name="view_leaderboard">View Leaderboard</string>
+    <string name="qxm_info">QXM Info</string>
+    <string name="correct_answer">Correct Answer</string>
+    <string name="your_answer_is_correct">Your answer is correct</string>
+    <string name="your_answer_is_wrong">Your answer is wrong</string>
+    <string name="answer_is_correct">Answer is correct</string>
+    <string name="answer_is_wrong">Answer is wrong</string>
+    <string name="correct_answer_is_not_available">Correct answer is not available.</string>
+    <string name="time_is_up">Time is up</string>
+    <string name="percentage_100">100%</string>
+    <string name="your_answer">Your answer</string>
+    <string name="enrollment">Enrollment</string>
+    <string name="cancel_request">Cancel Request</string>
+    <string name="reject">Reject</string>
+    <string name="public_qxm">Public Qxm</string>
+    <string name="accept">Accept</string>
+    <string name="status_pending">Status: Pending</string>
+    <string name="result_published">Result: published</string>
+    <string name="just_now">just now</string>
+    <string name="following_list">Following List</string>
+    <string name="all">All</string>
+
+    <!-- Following Fragment -->
+    <string name="occasionally">Occasionally</string>
+    <string name="none">None</string>
+    <string name="ok">OK</string>
+    <string-array name="following_filter">
+        <item>New Activity</item>
+        <item>A-Z</item>
+    </string-array>
+
+    <!-- Group -->
+    <string name="create_group">Create Group</string>
+    <string name="group_description">Group Description</string>
+    <string name="group_name">Group Name</string>
+    <string name="join_request_needed">Join request needed</string>
+    <string name="member_can_add_other">Member can add other</string>
+    <string name="members_are_visible_among_other">Members are visible among other</string>
+    <string name="group_privacy">Group privacy</string>
+    <string name="create">Create</string>
+    <string name="group_settings">Group Settings</string>
+    <string name="zero_member">0 Member</string>
+    <string name="no_group_message">You have no group, create a new group or join others group.</string>
+    <string name="no_list_message">You have no list, create a new list to keep your similar qxm\'s in a single place.</string>
+    <string name="group">Group</string>
+    <string name="join">Join</string>
+    <string name="invite_people">Invite People</string>
+    <string name="other_options">Other options</string>
+    <string name="no_qxm_added_to_this_group">No Qxm added to this Group.</string>
+    <string name="empty_feed_message">Group feed is empty.</string>
+    <string name="you_have_not_followed_any_user_yet">You have not followed any user yet!</string>
+    <string name="no_public_group_found">No public group found!</string>
+
+    <string-array name="notification_frequency">
+        <item>Frequently</item>
+        <item>Occasionally</item>
+        <item>Off</item>
+    </string-array>
+
+    <string-array name="group_privacy">
+        <item>Public</item>
+        <item>Private</item>
+    </string-array>
+    <string name="enrolled">Enrolled :</string>
+    <string name="participant_colon">Participants :</string>
+    <string name="profile">Profile</string>
+    <string name="follow">Follow</string>
+    <string name="followed">Followed</string>
+    <string name="profile_settings">Profile settings</string>
+    <string name="lives_in">Lives in \u00A0</string>
+    <string name="studied_at">Studied at \u00A0</string>
+    <string name="after_qxm_expires">After Qxm Expires</string>
+    <string name="after_qxm_expires_and_evaluation_done">After Qxm expires and evaluation done</string>
+    <string name="immediately_after_participation">Immediately after participation</string>
+    <string name="immediately_after_participation_and_evaluation_done">Immediately after participation and evaluation
+        done</string>
+    <string name="after_contest_ends">After contest ends</string>
+    <string name="after_contest_ends_and_evaluation_done">After contest ends and evaluation done</string>
+    <string name="login_session_expired_message">Your login session has expired, please login again.</string>
+    <string name="network_call_something_went_wrong_message">Something went wrong. Please try again.</string>
+    <string name="network_call_failure_message">Network error. Please, try again later.</string>
+    <string name="no_internet_found">Check your connection or try again!</string>
+    <string name="retry">Retry</string>
+    <string name="qxm_evaluation">Qxm Evaluation</string>
+    <string name="evaluate">Evaluate</string>
+    <string name="later">Later</string>
+    <string name="qxm_result">Qxm Result</string>
+    <string name="close">Close</string>
+    <string name="qxm_result_published">Qxm Result Published</string>
+
+    <!-- Notification-->
+    <string name="notification_channel_followers">Follower Notification Channel</string>
+    <string name="notification_channel_qxm">Qxm Notification Channel</string>
+    <string name="notification_channel_private_qxm">Private Qxm Notification Channel</string>
+    <string name="notification_channel_evaluation">Evaluation Notification Channel</string>
+    <string name="notification_channel_result">Result Notification Channel</string>
+    <string name="notification_channel_group">Group Notification Channel</string>
+    <string name="suggested">Suggested</string>
+    <string name="add_members">Add Members</string>
+    <string name="add_member">Add Member</string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search Anything</string>
+
+    <!--Notification Channel Description-->
+    <string name="channel_follower_description">This is the Follower channel. The user gets notification of new followers.</string>
+    <string name="channel_qxm_description">This is the Qxm channel. The user gets notification of new Qxms.</string>
+    <string name="channel_private_qxm_description">This is the Private Qxm channel. The user gets notification of all Private Qxms through this channel.</string>
+    <string name="channel_enroll_description">This is the Qxm Enroll channel. The user gets notification of all Enrollments of a Qxm through this channel.</string>
+    <string name="channel_evaluation_description">This is the Qxm Evaluation channel. The user gets notification of pending evaluation of a Qxm through this channel.</string>
+    <string name="channel_result_description">This is the Qxm Result channel. The user gets notification of the published result of a Qxm.</string>
+    <string name="channel_group_description">This is the Group channel. The user gets notification of the groups using this channel.</string>
+
+    <!-- Toast Messages -->
+    <string name="facebook_login_error_message">Facebook Login error. Please, Check your network connection.</string>
+    <string name="home_empty_feed_message">Currently your feed is empty. \n\nFollow people or create a Qxm in order to populate Home with Qxm.</string>
+    <string name="profile_empty_feed_message">You do not have any post yet!</string>
+    <string name="other_user_profile_empty_feed_message">%s has not posted anything yet!</string>
+    <string name="you_have_not_created_any_qxm_yet">You have not created any Qxm yet.</string>
+    <string name="search_for">Search for</string>
+    <string name="people">People</string>
+    <string name="post">Post</string>
+    <string name="recent_search">Recent Search</string>
+    <string name="written_by">Written by -</string>
+    <string name="qxm">Qxm</string>
+    <string name="no_user_found">No user found with this keyword!</string>
+    <string name="no_qxm_found">No qxm found with this keyword!</string>
+    <string name="no_group_found">No group found with this keyword!</string>
+    <string name="my_group_list">My group list</string>
+    <string name="you_dont_have_any_group_yet">You don\'t have any group yet!</string>
+    <string name="you_dont_have_any_list_yet">You don\'t have any list yet!</string>
+    <string name="create_list">Create List</string>
+    <string name="new_list">New List</string>
+    <string name="list_title">Title</string>
+    <string name="list_privacy">Privacy</string>
+    <string name="anyone_can_view">Anyone can view</string>
+    <string name="my_list">My list</string>
+    <string name="follower_list">Follower list</string>
+    <string name="group_list">Group list</string>
+    <string name="horizontal_line">horizontal line</string>
+    <string name="add_new">Add New</string>
+    <string name="interests">Interests</string>
+    <string name="occupation">Occupation</string>
+    <string name="description">Description</string>
+    <string name="add_social">Add New</string>
+    <string name="social_address">Social Address</string>
+    <string name="website">Website</string>
+    <string name="add_website">Add New</string>
+    <string name="use_gps">USE GPS</string>
+    <string name="your_country">Your country</string>
+    <string name="your_address">Your address</string>
+    <string name="education">Education</string>
+
+    <string-array name="list_privacy">
+        <item>Public</item>
+        <item>Private</item>
+    </string-array>
+    <string name="this_question_is_scheduled_to_manual_start_click_the_following_button_to_start_the_exam">This Question is scheduled to manual start. Click the following button to start the exam.</string>
+    <string name="start_exam_now">START EXAM NOW</string>
+    <string name="you_have_already_participated_in_this_qxm">You have already participated in this Qxm</string>
+    <string name="the_exam_has_not_been_started_yet">The exam has not been started yet.</string>
+    <string name="this_is_your_own_qxm">This is your own Qxm</string>
+    <string name="single_qxm_details">Single Qxm Details</string>
+    <string name="saved_as_draft">Saved as Draft</string>
+    <string name="poll_progress_bar_color">#2196F3</string>
+    <string name="text_highlighter_blue">#70B5EB</string>
+    <string name="text_primary_color">#3B3535</string>
+    <string name="text_secondary_color">#8F8F8F</string>
+    <string name="add_option">Add New Poll Option</string>
+    <string name="write_poll_title">Write Poll Title</string>
+    <string name="poll">Create Poll</string>
+    <string name="options">Options</string>
+    <!--Qxm Draft-->
+    <string name="draft_empty_message">Qxm Draft is empty.</string>
+    <!--region Result-->
+    <string name="result_list_empty_message">Your Result list is empty. When you participate in an Qxm, your result list will populate.</string>
+    <string name="add_thumbnail_in_poll">Add Thumbnail in Poll</string>
+    <string name="change_image">Change Image</string>
+    <string name="remove_image">Remove Image</string>
+    <string name="poll_option_1">Poll Option 1</string>
+    <string name="poll_option_2">Poll Option 2</string>
+    <string name="poll_option">Poll Option</string>
+    <string name="uploading_image">Uploading Image…</string>
+
+
+    <string name="copy_link">Copy Link</string>
+    <string name="change_group_image">Change Group Image</string>
+    <string name="generate_qr_code">Generate QR Code</string>
+
+    <!--region Report-->
+
+    <string name="report_this_user">Report this user</string>
+    <string name="report_this_qxm">Report this qxm</string>
+    <string name="report_this_group">Report this group</string>
+    <string name="report_this_poll">Report this poll</string>
+    <string name="report_this_single_mcq">Report this single MCQ</string>
+
+    <string name="posting_photos_with_erotic_or_pornographic_content">Posting photos with erotic or pornographic content</string>
+    <string name="violent_or_repulsive_content">Violent or repulsive content</string>
+    <string name="content_offensive_for_other_users">Content, offensive or harmful for other users</string>
+    <string name="distributing_spam">Distributing spam or misleading</string>
+    <string name="write_something_specific">Write something specific</string>
+
+    <!--endregion-->
+
+    <!--region QR Code-->
+    <string name="qr_code">QR Code</string>
+    <string name="user_qr_code">User QR Code</string>
+    <string name="qxm_qr_code">Qxm QR Code</string>
+    <string name="group_qr_code">Group QR Code</string>
+    <!--endregion-->
+
+
+    <string name="not_interested">Not interested</string>
+    <string name="report">Report</string>
+
+    <string name="share_this_qxm_link_with_others">Share this qxm link with others</string>
+    <string name="share_qxm_via">Share Qxm via</string>
+    <string name="qxm_removed">Qxm removed</string>
+    <string name="undo">UNDO</string>
+    <string name="tell_us_why">TELL US WHY</string>
+    <string name="tell_us_why_camel_case">Tell Us Why</string>
+    <string name="i_ve_already_participated_in_this_qxm">I\'ve already participated in this qxm</string>
+    <string name="i_don_t_like_this_qxm">I don\'t like this qxm</string>
+    <string name="i_m_not_interested_in_this_category_category_name">I\'m not interested in this category: category name</string>
+    <string name="add_qxm_to_list">Add Qxm to list</string>
+    <string name="share_qxm">Share Qxm</string>
+    <string name="no_qxm_found_in_this_list">No qxm found in this list!</string>
+    <string name="remove_from_list">Remove from list</string>
+    <string name="add_thumbnail">Add Thumbnail</string>
+    <string name="add_youtube_video">Add YouTube Video</string>
+    <string name="participate">Participate</string>
+    <string name="your_result_list_is_empty">Your result list is empty.</string>
+    <string name="you">You</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="participation">Participation</string>
+    <string name="participator_list">Participator List</string>
+    <string name="toast_something_went_wrong">Something went wrong,try again later!</string>
+    <string name="no_participator_found">No Participator Found!</string>
+    <string name="participant_list">Participant List</string>
+    <string name="enrolled_list">Enrolled List</string>
+    <string name="new_youtube_link">New youtube link</string>
+    <string name="new_facebook_link">New facebook link</string>
+    <string name="new_linkedin_link">New linkedin link</string>
+    <string name="new_instagram_link">New Instagram link</string>
+    <string name="new_twitter_link">New Twitter link</string>
+
+    <string name="hide_this_notification">Hide this notification</string>
+    <string name="create_a_qxm">Create a Qxm</string>
+    <string name="create_a_poll">Create a Poll</string>
+    <string name="anonymous_poll">Anonymous poll</string>
+    <string name="create_a_new_qxm_or_poll">Create a new Qxm or Poll</string>
+    <string name="please_tap_a_button_inorder_to_create_a_qxm_or_poll">Please tap a button inorder to create a Qxm or Poll</string>
+    <string name="no_votes">No votes</string>
+    <string name="one_vote">1 vote</string>
+    <string name="or">or</string>
+    <string name="all_qxms">All Qxms</string>
+    <string name="public_qxms">Public Qxms</string>
+    <string name="private_qxms">Private Qxms</string>
+    <string name="observation_colon">Observation:</string>
+    <string name="members">Members</string>
+    <string name="qxms_capital_letter">QXMs</string>
+    <string name="choose_your_interests">Choose Your Interests</string>
+    <string name="next">NEXT</string>
+    <string name="choose_at_least_three_interest">Choose at least three interest</string>
+    <string name="choose_your_preferable_language">Choose Your Preferable Languages</string>
+    <string name="add_language">ADD LANGUAGE</string>
+    <string name="add_your_preferred_language_by_tapping_the_following_button">Add your preferred language by tapping the following button</string>
+    <string name="you_have_chosen_the_following_languages">You have chosen the following languages</string>
+    <string name="choose_your_preferred_languages">Choose your preferred languages</string>
+    <string name="occupation_designation">Designation</string>
+    <string name="organization">Organization</string>
+    <string name="work_duration">Work Duration</string>
+    <string name="city_name">City</string>
+    <string name="city_value">Sylhet</string>
+    <string name="notifications">NOTIFICATIONS</string>
+    <string name="push_notification">Push notifications</string>
+    <string name="play_sound">Play sound</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="get_notifications_from_qxms_followings_groups">Get notifications from Qxms, followings, Groups</string>
+    <string name="push_notification_categories">PUSH NOTIFICATION CATEGORIES</string>
+    <string name="following_notifications">Following notifications</string>
+    <string name="participation_notifications">Participation notifications</string>
+    <string name="group_notifications">Group notifications</string>
+    <string name="poll_notifications">Poll notifications</string>
+    <string name="result_notifications">Result notifications</string>
+    <string name="about">ABOUT</string>
+    <string name="third_party_notices">Third Party Notices</string>
+    <string name="qxm_terms_and_conditions">Qxm Terms and Conditions</string>
+    <string name="version">Version</string>
+    <string name="title_privacy">Privacy</string>
+    <string name="evaluation_notifications">Evaluation notifications</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="notification_behavior">Notification Behavior</string>
+    <string name="notification_categories">Notification Categories</string>
+    <string name="pending_evaluation">Pending Evaluation</string>
+    <string name="see_list">See List</string>
+    <string name="evaluated_total">Evaluated Total</string>
+    <string name="ugly">Ugly</string>
+    <string name="bad">Bad</string>
+    <string name="not_bad">Not Bad</string>
+    <string name="good">Good</string>
+    <string name="awesome">Awesome</string>
+    <string name="design">Design</string>
+    <string name="content">Content</string>
+    <string name="overall">Overall</string>
+    <string name="comment">Comment</string>
+    <string name="bug">Bug</string>
+    <string name="others">Others</string>
+    <string name="easy_of_use">Easy Of Use</string>
+    <string name="tell_us_your_thoughts">Tell us your thoughts…</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="average">Average</string>
+    <string name="choose_email_client">Choose email client</string>
+    <string name="email_subject_help_and_support">Qxm - Help &amp; Support</string>
+    <string name="email_address_qxm_help_and_support">info@myqxm.com</string>
+    <string name="you_have_not_participated_any_qxm_yet">You have not participated any Qxm yet.</string>
+    <string name="you_have_not_enrolled_any_qxm_yet">You have not enrolled any Qxm yet.</string>
+    <string name="your_people_enroll_list_is_empty">Your people enroll list is empty.</string>
+    <string name="your_enroll_sent_request_list_is_empty">Your enroll sent request list is empty.</string>
+    <string name="your_enroll_received_request_list_is_empty">Your enroll received request list is empty.</string>
+    <string name="please_enter_your_email_address_and_we_ll_send_you_an_email_to_reset_your_password">Please enter your email address and we\'ll send you an email to reset your password.</string>
+    <string name="send">Send</string>
+    <string name="group_members">Group Members</string>
+    <string name="delete_group">Delete Group</string>
+    <string name="preferable_language">Preferable Language</string>
+    <string name="toast_message_could_not_upload_image_try_again_later">Could not upload image, try again later!</string>
+    <string name="photo_uploaded_successfully">Photo uploaded successfully!</string>
+    <string name="youtube_link">Paste YouTube link</string>
+    <string name="remove_thumbnail">Remove Thumbnail</string>
+    <string name="toast_message_image_uploaded_successfully">Image uploaded successfully!</string>
+    <string name="make_admin">Make Admin</string>
+    <string name="make_moderator">Make Moderator</string>
+    <string name="remove_member">Remove Member</string>
+    <string name="leave_group">Leave Group</string>
+    <string name="playing_youtube_video">Playing YouTube Video</string>
+    <string name="admin">Admin</string>
+    <string name="member">Member</string>
+    <string name="moderator">Moderator</string>
+    <string name="make_member">Make Member</string>
+    <string name="remove_from_group">Remove from Group</string>
+    <string name="sent_invitations">Sent Invitations</string>
+
+    <!--Progress dialog titles & messages-->
+    <string name="title_create_group">Create Group</string>
+    <string name="message_create_group">The group is being created, please wait…</string>
+    <string name="received_group_join_requests">Received Group Join Requests</string>
+    <string name="send_join_request">Send Join Request</string>
+    <string name="sending_request">Sending request</string>
+    <string name="request_sent">Request sent</string>
+    <string name="invitation_list">Invitation List</string>
+    <string name="hide">Hide</string>
+    <string name="poll_removed">Poll removed</string>
+    <string name="single_mcq_removed">Single MCQ removed</string>
+    <string name="alert_dialog_title_delete_poll">Delete Poll</string>
+    <string name="alert_dialog_message_delete_poll">Are you sure, you really want to delete this poll!</string>
+
+    <string name="alert_dialog_title_delete_single_mcq">Delete Single MCQ</string>
+    <string name="alert_dialog_message_delete_single_mcq">Are you sure, you really want to delete this single MCQ!</string>
+
+    <string name="alert_dialog_title_delete_qxm">Delete Qxm</string>
+    <string name="alert_dialog_message_delete_qxm">Are you sure, you really want to delete this Qxm!</string>
+    <string name="alert_dialog_title_edit_qxm">Loading Question Set</string>
+    <string name="alert_dialog_message_edit_qxm">Question is being loaded, please wait…</string>
+    <string name="alert_dialog_title_edit_single_mcq">Loading Single MCQ</string>
+    <string name="alert_dialog_message_edit_single_mcq">Single Multiple Choice Question is being loaded, please wait…</string>
+
+    <string name="alert_dialog_title_updating_single_mcq">Updating Single MCQ</string>
+    <string name="alert_dialog_message_updating_single_mcq">Single Multiple Choice Question is being updated, please wait…</string>
+
+    <string name="progress_dialog_message_delete_qxm">The Qxm is being deleted, please wait…</string>
+    <string name="progress_dialog_message_delete_poll">The Poll is being deleted, please wait…</string>
+    <string name="progress_dialog_message_delete_single_mcq">The Single MCQ is being deleted, please wait…</string>
+
+    <string name="delete_uppercase">DELETE</string>
+    <string name="no_uppercase">NO</string>
+    <string name="added_successfully">Added Successfully!</string>
+    <string name="poll_deleted_successfully">Poll deleted successfully.</string>
+    <string name="single_mcq_deleted_successfully">Single MCQ deleted successfully.</string>
+    <string name="network_call_qxm_delete_successfull_message">The Qxm has been successfully deleted from the group.</string>
+    <string name="copy_profile_link">Copy Profile Link</string>
+    <string name="account">Account</string>
+    <string name="update_password">Update Password</string>
+    <string name="change_your_sign_in_password">Change your sign in password</string>
+    <string name="account_status">Account Status</string>
+    <string name="tap_here_to_check_your_account_status">Tap here to check your account status</string>
+    <string name="toolbar_title_profile_setttings">Profile Settings</string>
+    <string name="dialog_description_account_not_verified_msg">Your account is not verified yet.\nTo send a verification email to you %s, please press the SEND VERIFICATION EMAIL button.</string>
+    <string name="dialog_title_account_not_verified">Account Not Verified</string>
+    <string name="verification_email_send_success_msg">A verification email has been sent to %s. Please check your email.</string>
+    <string name="account_is_verified">Account is verified.</string>
+    <string name="user_already_verified">User already verified.</string>
+    <string name="current_password">Current password</string>
+    <string name="new_password">New password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="password_updated_successfully">Password updated successfully.</string>
+    <string name="current_password_length_is_too_short_msg">The current password is length too short.</string>
+    <string name="invalid_password">Invalid password.</string>
+    <string name="password_do_not_match_msg"><![CDATA[New password & confirm password do not match. Type carefully.]]></string>
+    <string name="please_input_all_fields">Please input all fields.</string>
+    <string name="new_password_length_is_too_short_msg">New password length is too short. Password length must be 6 to 32.</string>
+    <string name="new_password_length_is_too_big_msg">New password length is too big. Password length must be 6 to 32.</string>
+    <string name="you_have_no_notification_in_this_category">You have no notification in this category.</string>
+    <string name="create_set_of_questions">Create Set of Questions</string>
+    <string name="create_set_of_questions_description"><![CDATA[- Standard Qxm with Various Types of Questions\n- Multiple Choice, Fill in the Blanks & Short Answer\n- User Defined Privacy]]></string>
+    <string name="create_poll_description">- Anonymous Poll\n- Can Add Image\n- Unlimited Poll Options\n- Privacy - Public</string>
+    <string name="create_single_multiple_choice_description">- Just one multiple choice type question\n- No Description\n- No Extra Question Set Title\n- Privacy - Public\n- Users Can See The Question Before Participate</string>
+    <string name="see_details">See Details</string>
+    <string name="create_single_mcq">Create Single MCQ</string>
+    <string name="add_question_thumbnail">Add Question Thumbnail</string>
+    <string name="single_multiple_choice_settings">Single Multiple Choice Settings</string>
+    <string name="question_category">Question Category</string>
+    <string name="single_multiple_choice_category_choosing_tips">Choose a category that suit best with this Single Multiple Choice Question</string>
+    <string name="raffle_draw">Raffle Draw</string>
+    <string name="immediately_after_publishing_the_question">Immediately after publishing the Question</string>
+    <string name="contest_starts">Contest Starts</string>
+    <string name="contest_ends">Contest Ends</string>
+    <string name="description_optional"> Question description (optional)</string>
+    <string name="question_expiration">Question Expiration</string>
+
+
+    <string name="category_science_and_technology"><![CDATA[Science & Technology]]></string>
+    <string name="category_general_knowledge">General Knowledge</string>
+    <string name="category_arts_and_culture"><![CDATA[Arts & Culture]]></string>
+    <string name="category_environment">Environment</string>
+    <string name="category_entertainment">Entertainment</string>
+    <string name="category_food">Food</string>
+    <string name="category_history">History</string>
+    <string name="category_education">Education</string>
+    <string name="category_fun">Fun</string>
+    <string name="category_globalization">Globalization</string>
+    <string name="category_books">Books</string>
+    <string name="category_film_and_animation"><![CDATA[Film & Animation]]></string>
+    <string name="category_professional_or_training_exam">Professional or Training Exam</string>
+    <string name="category_class_related_exam">Class Related Exam</string>
+    <string name="category_travel_and_exam"><![CDATA[Travel & Events]]></string>
+    <string name="category_game">Game</string>
+    <string name="category_news_and_politics"><![CDATA[News & Politics]]></string>
+    <string name="category_music">Music</string>
+    <string name="category_sport">Sports</string>
+    <string name="category_society">Society</string>
+    <string name="category_opinion">Opinion</string>
+    <string name="category_health_and_medicine">Health &amp; Medicine</string>
+    <string name="category_gadget_and_product"><![CDATA[Gadget & Product]]></string>
+    <string name="category_engineering">Engineering</string>
+    <string name="category_design_and_prototyping"><![CDATA[Design & Photography]]></string>
+    <string name="category_tutorial">Tutorial</string>
+    <string name="category_quiz">Quiz</string>
+    <string name="category_programming">Programming</string>
+    <string name="category_business">Economics &amp; Business</string>
+    <string name="category_biology_and_bio_technology">Biology &amp; Biotechnology</string>
+    <string name="category_electrical_and_electronics">Electrical &amp; Electronics</string>
+
+
+    <string name="_10">10</string>
+    <string name="contest_start_time">Contest Start Time</string>
+    <string name="contest_end_time">Contest End Time *</string>
+    <string name="title_qxm_exam_duration">Exam Duration</string>
+    <string name="title_exam_duration">Exam Duration</string>
+    <string name="title_qxm_evaluation_type">Answer Evaluation Type</string>
+    <string name="single_mcq">Single MCQ</string>
+    <string name="fixed_marks_one">1.00</string>
+
+    <string-array name="language_names">
+        <item name="arabic">Arabic</item>
+        <item name="bangla">Bangla</item>
+        <item name="chinese">Chinese</item>
+        <item name="english">English</item>
+        <item name="hindi">Hindi</item>
+        <item name="japanese">Japanese</item>
+        <item name="portuguese">Portuguese</item>
+        <item name="Punjabi">Punjabi</item>
+        <item name="russian">Russian</item>
+        <item name="spanish">Spanish</item>
+    </string-array>
+
+    <!--third party notices starts-->
+
+    <string name="third_party_notice_intro">The following sets forth attribution notices for third party library that may be contained in portion of the QXM android mobile application</string>
+
+    <!--dagger2-->
+    <string name="dagger_copyright">Copyright 2012 The Dagger Authors</string>
+    <string name="dagger2">Dagger 2</string>
+    <string name="dagger_license_explanation">Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <!--butterknife-->
+    <string name="butterknife_copyright">Copyright 2013 Jake Wharton</string>
+    <string name="butterKnife">Butter Knife</string>
+    <string name="butterKnife_license_explanation">Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <!--okhttp-->
+    <string name="okhttp">OkHttp</string>
+    <string name="okhttp_license_explanation">Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <!--retrofit-->
+    <string name="retrofit_copyright">Copyright 2013 Square, Inc.</string>
+    <string name="retrofit">Retrofit</string>
+    <string name="retrofit_license_explanation">Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <!--retrofit-->
+    <string name="picasso_copyright">Copyright 2013 Square, Inc.</string>
+    <string name="picasso">Picasso</string>
+    <string name="picasso_license_explanation">Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+
+
+    <!--facebook-android-sdk-->
+    <string name="facebook_android_sdk">Facebook SDK for Android</string>
+    <string name="facebook_android_sdk_license_explanation">Except as otherwise noted, the Facebook SDK for Android is licensed under the Facebook Platform License (https://github.com/facebook/facebook-android-sdk/blob/master/LICENSE.txt).\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <!--bottomNavigationViewEx-->
+    <string name="bottomNavigationViewEx_copyright">MIT License\nCopyright © 2017 ittianyu</string>
+    <string name="bottomNavigationViewEx">BottomNavigationViewEx</string>
+    <string name="bottomNavigationViewEx_license_explanation">Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+        HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+
+    <!--bottomNavigationViewEx-->
+    <string name="circleimageview_copyright">Copyright 2014 – 2018 Henning Dodenhof</string>
+    <string name="circleimageview">CircleImageView</string>
+    <string name="circleimageview_license_explanation">Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <!--ucrop-->
+    <string name="ucrop_copyright">Copyright 2017, Yalantis</string>
+    <string name="ucrop">uCrop - Image Cropping Library for Android</string>
+    <string name="ucrop_license_explanation">Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <!--eventBus-->
+    <string name="eventBus_copyright">Copyright © 2012–2017 Markus Junginger, greenrobot (http://greenrobot.org)</string>
+    <string name="eventBus">EventBus</string>
+    <string name="eventBus_license_explanation">EventBus binaries and source code can be used according to the Apache License, Version 2.0.</string>
+
+
+    <!--timeAgo-->
+    <string name="timeAgo_copyright">Copyright 2016 marlonlom</string>
+    <string name="timeAgo">TimeAgo</string>
+    <string name="timeAgo_license_explanation">Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <!--android_simple_tooltip-->
+    <string name="android_simple_tooltip_copyright">The MIT License (MIT)\nCopyright © 2016 Douglas Nassif Roma Junior</string>
+    <string name="android_simple_tooltip">Android Simple Tooltip</string>
+    <string name="android_simple_tooltip_license_explanation">Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+        HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+
+    <!--rxjava-->
+    <string name="rxjava_copyright">Copyright © 2016-present, RxJava Contributors.</string>
+    <string name="rxjava">RxJava: Reactive Extensions for the JVM</string>
+    <string name="rxjava_license_explanation">Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <!--rxandroid-->
+    <string name="rxandroid_copyright">Copyright 2015 The RxAndroid authors</string>
+    <string name="rxandroid">RxAndroid: Reactive Extensions for Android</string>
+    <string name="rxandroid_license_explanation">Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <!--onesignal_android_sdk-->
+    <string name="onesignal_android_sdk_copyright">Modified MIT License\nCopyright 2016 OneSignal</string>
+    <string name="onesignal_android_sdk">OneSignal Android Push Notification Plugin</string>
+    <string name="onesignal_android_sdk_license_explanation">Full license will be found here:\nhttps://github.com/OneSignal/OneSignal-Android-SDK/blob/master/LICENSE</string>
+
+    <!--zxing-->
+    <string name="zxing_copyright"> Apache License\nVersion 2.0, January 2004</string>
+    <string name="zxing">zxing</string>
+    <string name="zxing_license_explanation">Full license will be found here:\nhttps://github.com/zxing/zxing/blob/master/LICENSE</string>
+
+    <!--realmfieldnameshelper-->
+    <string name="realmfieldnameshelper_copyright"> Apache License\nVersion 2.0, January 2004</string>
+    <string name="realmfieldnameshelper">Realm Field Names Helper</string>
+    <string name="realmfieldnameshelper_license_explanation">Full license will be found here:\nhttps://github.com/cmelchior/realmfieldnameshelper/blob/master/LICENSE</string>
+
+
+    <!--tagsediteext-->
+    <string name="tagseditext_copyright"> Apache License\nVersion 2.0, January 2004</string>
+    <string name="tagseditext">TagsEditText</string>
+    <string name="tagseditext_license_explanation">Full license will be found here:\nhttps://github.com/mabbas007/TagsEditText/blob/master/LICENSE</string>
+    <string name="choose_correct_answer">Choose correct answer(s)</string>
+    <string name="qxm_terms_and_privacy_url">https://www.myqxm.com/privacy_policy</string>
+    <string name="edit_qxm">Edit QXM</string>
+    <string name="alert_dialog_title_warning">Warning !</string>
+    <string name="alert_dialog_message_qxm_edit_fragment_on_back_press_warning">All of your Edited questions will be discarded if you go back. Are you sure you want to go back?</string>
+    <string name="alert_dialog_message_edit_qxm_info">You can only edit text fields, update image and youtube video.\n\n You can NOT add or remove questions, answers, options.</string>
+    <string name="alert_dialog_title_edit_qxm_info">Info</string>
+    <string name="selected_participant">Selected Participant</string>
+    <string name="participated">Participated</string>
+    <string name="single_mcq_participation">Single MCQ Participation</string>
+    <string name="create_single_multiple_choice">Create Single Multiple Choice</string>
+    <string name="create_poll">Create Poll</string>
+    <string name="second_priority">Second Priority</string>
+    <string name="marks">Marks</string>
+    <string name="first_priority">First Priority</string>
+    <string name="single_mcq_overview">Single MCQ Overview</string>
+    <string name="update">Update</string>
+    <string name="edit_single_mcq">Edit Single MCQ</string>
+    <string name="toast_edit_single_mcq_add_option_restriction_message">You can not add New MCQ Option in Edit Mode. Add MCQ Option has been restricted in Edit Mode.</string>
+    <string name="toast_single_mcq_options_menu_restriction_message">You can not use options menu, The usage of options menu has been restricted in Edit Mode.</string>
+    <string name="edit_poll">Edit Poll</string>
+
+    <string name="progress_dialog_title_update_password">Updating Password</string>
+    <string name="progress_dialog_message_update_password">Your password is being updated, please wait…</string>
+
+    <string name="progress_dialog_title_edit_poll">Updating Poll</string>
+    <string name="progress_dialog_message_edit_poll">Poll is being updated, please wait…</string>
+    <string name="progress_dialog_title_fetch_poll_data">Fetching Poll data</string>
+    <string name="progress_dialog_message_fetch_poll_data">Fetching the poll data, please wait…</string>
+    <string name="toast_message_on_success_poll_update">Poll is updated successfully</string>
+    <string name="dialog_title_report_submit">Report Submit</string>
+    <string name="dialog_message_report_submit">The report is being submitted, please wait…</string>
+    <string name="total_negative_marks_msg">Negative mark(s) for each wrong answer:</string>
+    <string name="zero_percentage">0.00%</string>
+    <string name="evaluation_type_automatic_disable_tips">As your question set contains \"Fill in the Blanks\" or \"Short
+        Answer\",by default evaluation type \"Automatic\" has been disabled.</string>
+    <string name="toast_message_comming_soon">Coming soon !</string>
+    <string name="please_answer_required_question_message">Please answer all the required question first.</string>
+    <string name="alert_dialog_message_updated_apk_available">Updated App Available !</string>
+    <string name="your_current_apk_version">Your current app version is </string>
+    <string name="full_result_single_mcq">Full Result Single MCQ</string>
+    <string name="single_mcq_info">Single MCQ Info</string>
+    <string name="the_minimum_interval_time_between_post_message">The minimum interval between two posts is 30 seconds.</string>
+    <string name="single_mcq_details">Single MCQ Details</string>
+    <string name="leaderboard_single_mcq">Leader Board Single MCQ</string>
+    <string name="checking_update_please_wait">Checking updates, please wait…</string>
+    <string name="edited">Edited</string>
+    <string name="result_pending">Result: pending</string>
+    <string name="alert_dialog_message_server_under_maintenance">Notice !</string>
+    <string name="show_result_after_evaluation">Show result after evaluation</string>
+    <string name="your_enroll_request_is_pending">Your enrol request is pending.</string>
+    <string name="toast_message_qxm_status_not_started">This qxm is not available for participation yet.</string>
+    <string name="toast_message_qxm_status_expired">The participation of Qxm has been expired.</string>
+    <string name="toast_message_qxm_status_stopped">The participation of Qxm has been stopped by the creator.</string>
+    <string name="progress_dialog_title_question_overview_loading">Question Overview</string>
+    <string name="progress_dialog_message_question_overview_loading">Loading question. Please wait..</string>
+    <string name="time_picker_dialog_dialog_choose_qxm_start_date">Choose Exam Start Date</string>
+    <string name="time_picker_dialog_title_choose_qxm_expiration_date">Choose Exam Expiration Date</string>
+    <string name="time_picker_dialog_title_choose_contest_start_time">Choose Contest Start Time</string>
+    <string name="time_picker_dialog_title_choose_contest_end_time">Choose Contest End Time</string>
+    <string name="time_picker_dialog_choose_correct_answer_visibility_date">Choose Correct Answer Visibility Date</string>
+    <string name="time_picker_dialog_choose_leaderboard_publish_date">Choose Leader board Publish Date</string>
+    <string name="character_limit_with_variable">Character limit: %s</string>
+    <string name="give_character_limit">Give character limit</string>
+    <string name="toast_message_question_reached_maximum_length">The maximum allowed length of the Question is</string>
+    <string name="toast_message_fill_in_the_blanks_question_reached_maximum_length">The maximum allowed length of the Fill In The Blanks Question is</string>
+    <string name="toast_message_hidden_description_reached_maximum_length">The maximum allowed length of the Hidden Description is</string>
+    <string name="toast_message_description_reached_maximum_length">The maximum allowed length of the Description is</string>
+    <string name="toast_message_qxm_title_reached_maximum_length">The maximum allowed length of the Question Set title is</string>
+    <string name="toast_message_qxm_description_reached_maximum_length">The maximum allowed length of the Question Set description is</string>
+    <string name="toast_message_tag_reached_maximum_length">The maximum allowed length of the Tag is</string>
+    <string name="toast_message_point_reached_maximum_limit">The maximum allowed point is 99.</string>
+    <string name="toast_message_character_input_reached_maximum_limit">The maximum allowed character limit is 999.</string>
+    <string name="qxm_local_resource_storage_directory_name">qxmData</string>
+    <string name="toast_message_we_are_working_on_it_it_will_back_soon">Sorry, We are working on it, it will be back soon.</string>
+    <string name="your_city">Your city</string>
+    <string name="see_leaderboard">See Leader board</string>
+    <string name="wrong">Wrong</string>
+    <string name="correct">Correct</string>
+    <string name="leaderboard_is_not_published_yet">Leader board is not published yet.</string>
+    <string name="leaderboard_will_be_published_at_with_variable">Leader board will be published at %s</string>
+    <string name="version_name_must_be_number">Version name can only contain number</string>
+    <string name="both_versions_must_contain_same_decimal_count">Both versions must contain same decimal count</string>
+    <string name="current_password_not_matched">Incorrect current password. Please type your current password correctly.</string>
+    <string name="the_qxm_has_been_expired">The Qxm has been expired.</string>
+    <string name="member_added">Member Added</string>
+    <string name="adding_member">Adding Member…</string>
+    <string name="remove_moderator">Remove Moderator</string>
+    <string name="pending_request">Pending Request</string>
+    <string name="pending_join_requests">Pending Join Requests</string>
+    <string name="remove_from_admin">Remove From Admin</string>
+    <string name="request_pending">Request Pending</string>
+    <string name="success">Success</string>
+    <string name="invalid_url">Invalid URL!</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="make_your_date_of_birth_visible_to_others">Make your date of birth visible to others</string>
+    <string name="_12_12_19">12/12/19</string>
+    <string name="provide_date_of_birth">Provide Date of Birth</string>
+    <string name="select_your_gender">Select your gender</string>
+    <string name="Poll">Poll</string>
+    <string name="created_by">Created By:</string>
+    <string name="no_single_mcq_found_with_this_keyword">No single mcq found with this keyword!</string>
+    <string name="no_poll_found_with_this_keyword">No poll  found with this keyword!</string>
+
+    <string name="alert_dialog_message_create_qxm_fragment_on_back_press_warning">All of Your created questions will be discarded if you go back. Are you sure you want to go back?</string>
+    <string name="alert_dialog_message_create_single_multiple_choice_fragment_on_back_press_warning">Your created MCQ question will be discarded if you go back. Are you sure you want to go back ?</string>
+    <string name="alert_dialog_message_create_poll_fragment_on_back_press_warning">Your created poll will be discarded if you go back. Are you sure you want to go back ?</string>
+    <string name="network_call_something_went_wrong_could_not_load_drafted_qxm_message">Something went wrong. Could not load Drafted Qxms from Server.</string>
+    <string name="network_call_failure_could_not_load_drafted_qxm_message">Network error. Could not load Drafted Qxms from Server.</string>
+    <string name="progress_dialog_title_qxm_draft">Qxm Draft</string>
+    <string name="progress_dialog_message_qxm_draft">Please wait, qxm draft is being loaded…</string>
+    <string name="coming_soon">Coming Soon!</string>
+    <string name="poll_overview">Poll Overview</string>
+    <string name="number_of_winner">Number of Winner:</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="participants_only">Participants Only</string>
+    <string name="never">Never</string>
+    <string name="priority_1_marks">Priority 1: Marks</string>
+    <string name="priority_2_raffle_draw">Priority 2: Raffle Draw</string>
+    <string name="loggedin_devices">Logged in Devices</string>
+    <string name="devices_that_have_been_active_on_your_account_or_are_currently_signed_in">Devices that have been active on your account, or are currently signed in.</string>
+    <string name="signed_in_devices">Signed In Devices</string>
+    <string name="sign_out_from_everywhere">SIGN OUT FROM EVERYWHERE</string>
+    <string name="unknown">Unknown</string>
+    <string name="current_device">Current Device</string>
+    <string name="list">List</string>
+    <string name="no_list_found_with_this_keyword">No list found with this keyword!</string>
+    <string name="toast_coming_soon">Coming soon!</string>
+    <string name="expired_login_session">Your login session has expired, please login again.</string>
+    <string name="leader_board_not_published_yet">Leader board is not published yet</string>
+
+    <!--third party notices end-->
+
+    <!--Group privacy text starts-->
+    <string name="group_public_text">This group is public</string>
+    <string name="group_private_text">This group is private</string>
+    <!--Group privacy text ends -->
+
+    <string name="question_expired_after_participation">After participation</string>
+    <string name="correct_answer_visibility_prefix">Questions with correct answers will be visible on</string>
+    <string name="exam_start_schedule">Exam starts schedule: </string>
+    <string name="after_evaluation">after evaluation</string>
+    <string name="invalid_youtube_url">Invalid youtube URL!</string>
+    <string name="result_not_published_yet">Result not published yet</string>
+    <string name="toast_given_point_exceeded">The given point can not exceed the actual point</string>
+    <string name="actual_point_is_given">The actual point is given for this answer</string>
+    <string name="remember_me">Remember me</string>
+    <string name="fill_in_the_blanks_editing_not_allowed_till_now">Fill in the blanks editing is not supported till
+        now. You can remove it from three dot menu and add a new question</string>
+    <string name="network_error">Network error. Please try again later</string>
+    <string name="deleted_successfully">Deleted successfully!</string>
+    <string name="updated_successfully">Updated successfully!</string>
+    <string name="you_have_already_reported_this_content">You have already reported this content, we are looking on it.</string>
+    <string name="you_are_using_old_version">You are using old version , please update</string>
+    <string name="evaluation_type_manual_tips">When evaluation type is manual, you have to evaluate all the answers
+        manually by yourself.</string>
+    <string name="evaluation_type_semi_auto_tips">When evaluation type is semi automatic, \"Multiple Choice\" will be
+        evaluated automatically. But, you have to manually evaluate \"Fill in the Blanks\" or \"Short Answer\".</string>
+    <string name="evaluation_type_automatic_tips"> When evaluation type is automatic, all the answers will be
+        evaluated automatically based on your reference answer during question making.</string>
+    <string name="exam_start_manual_tip">You can start exam any time by clicking the start button.</string>
+    <string name="reference_answer">Reference answer by you</string>
+    <string name="answers_by_examinee">Answer by examinee</string>
+    <string name="your_answer_is_partially_correct">Your answer is partially correct</string>
+    <string name="agree_term_and_policy">By login or sign up, you agree with our terms and policy.</string>
+    <string name="user_defined_privacy">User Defined Privacy</string>
+    <string name="share_this_app">Share this App</string>
+
+
+    <string-array name="text">
+        <item>Science &amp; Technology</item>
+        <item>General Knowledge</item>
+        <item>Arts &amp; Culture</item>
+        <item>Environment</item>
+        <item>Entertainment</item>
+        <item>Food</item>
+        <item>History</item>
+        <item>Education</item>
+        <item>Fun</item>
+        <item>Globalization</item>
+        <item>Books</item>
+        <item>Film &amp; Animation</item>
+        <item>Professional or Training Exam</item>
+        <item>Class Related Exam</item>
+        <item>Travel &amp; Events</item>
+        <item>Game</item>
+        <item>News &amp; Politics</item>
+        <item>Music</item>
+        <item>Sports</item>
+        <item>Society</item>
+        <item>Opinion</item>
+        <item>Health &amp; Medicine</item>
+        <item>Gadget &amp; Product</item>
+        <item>Engineering</item>
+        <item>Design &amp; Photography</item>
+        <item>Tutorial</item>
+        <item>Quiz</item>
+        <item>Programming</item>
+        <item>Economics &amp; Business</item>
+        <item>Biology &amp; Biotechnology</item>
+        <item>Electrical &amp; Electronics</item>
+    </string-array>
+
+    <integer-array name="image">
+        <item>@drawable/ic_baseline_apps_24</item>
+        <item>@drawable/ic_baseline_apps_24</item>
+        <item>@drawable/ic_baseline_apps_24</item>
+        <item>@drawable/ic_baseline_apps_24</item>
+        <item>@drawable/ic_baseline_apps_24</item>
+        <item>@drawable/ic_baseline_apps_24</item>
+        <item>@drawable/ic_baseline_apps_24</item>
+    </integer-array>
+
+
+</resources>

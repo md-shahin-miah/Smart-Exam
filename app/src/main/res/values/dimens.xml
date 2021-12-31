@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="input_field_top_padding">16dp</dimen>
+    <dimen name="input_field_bottom_padding">16dp</dimen>
+    <dimen name="input_field_drawable_left_icon_padding">8dp</dimen>
+    <dimen name="input_field_left_margin">8dp</dimen>
+    <dimen name="input_field_right_margin">8dp</dimen>
+    <dimen name="input_field_margin_top">20dp</dimen>
+    <dimen name="drawable_padding">8dp</dimen>
+    <dimen name="content_margin">16dp</dimen>
+
+    <dimen name="text_size_extra_small">10sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">13sp</dimen>
+    <dimen name="text_size_regular">14sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_extra_large">18sp</dimen>
+    <dimen name="text_size_xx_large">20sp</dimen>
+    <dimen name="text_size_xxx_large">30sp</dimen>
+
+    <dimen name="line_spacing_extra">4dp</dimen>
+
+    <dimen name="icon_size_default">24dp</dimen>
+
+    <dimen name="margin_xx_small">2dp</dimen>
+    <dimen name="margin_extra_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_extra_large">24dp</dimen>
+    <dimen name="margin_xx_large">32dp</dimen>
+
+    <dimen name="padding_xx_small">2dp</dimen>
+    <dimen name="padding_extra_small">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_default">16dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+    <dimen name="padding_extra_large">24dp</dimen>
+    <dimen name="padding_xx_large">32dp</dimen>
+
+    <dimen name="card_view_radius_small">4dp</dimen>
+
+    <dimen name="line_spacing_large">4dp</dimen>
+    <dimen name="line_spacing_regular">2dp</dimen>
+
+    <!--Sample tool tip dimen-->
+    <dimen name="simpletooltip_max_width">150dp</dimen>
+    <dimen name="simpletooltip_overlay_offset">10dp</dimen>
+    <dimen name="simpletooltip_margin">10dp</dimen>
+    <dimen name="simpletooltip_padding">8dp</dimen>
+    <dimen name="simpletooltip_arrow_width">30dp</dimen>
+    <dimen name="simpletooltip_arrow_height">15dp</dimen>
+    <dimen name="simpletooltip_animation_padding">4dp</dimen>
+    <dimen name="margin_negative_extra_small">-4dp</dimen>
+    <dimen name="min_height_thumbnail">198dp</dimen>
+    <dimen name="min_width_thumbnail">352dp</dimen>
+    <dimen name="thumbnail_height">198dp</dimen>
+
+
+</resources>

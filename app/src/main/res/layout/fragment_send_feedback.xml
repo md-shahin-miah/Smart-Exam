@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.fragments.sendFeedback.SendFeedbackFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_home_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-16dp"
+                app:title="Qxm">
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBackArrow"
+                        android:layout_width="42dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/back_arrow"
+                        android:padding="@dimen/padding_medium"
+                        app:srcCompat="@drawable/ic_back_arrow" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivBackArrow"
+                        android:gravity="center_horizontal"
+                        android:text="@string/send_feedback"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_size_xx_large"
+                        app:fontFamily="@font/roboto_medium" />
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/ugly"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:fontFamily="@font/roboto_medium" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/bad"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:fontFamily="@font/roboto_medium" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/average"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:fontFamily="@font/roboto_medium" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="@dimen/margin_xx_small"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/good"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:fontFamily="@font/roboto_medium" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/awesome"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:fontFamily="@font/roboto_medium" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_xx_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:background="@drawable/background_light_blue"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_small"
+                android:weightSum="6">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/content"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto_medium" />
+
+                <RadioGroup
+                    android:id="@+id/rgContent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbContentUgly"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+
+                        />
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbContentBad"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbContentNotBad"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                         />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbContentGood"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbContentAwesome"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"/>
+
+
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_xx_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:background="@drawable/background_light_blue"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_small"
+                android:weightSum="6">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/design"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto_medium" />
+
+                <RadioGroup
+                    android:id="@+id/rgDesign"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_xx_small"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbDesignUgly"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+
+                        />
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbDesignBad"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                         />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbDesignNotBad"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                         />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbDesignGood"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbDesignAwesome"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+
+                        />
+
+
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_xx_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:background="@drawable/background_light_blue"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_small"
+                android:weightSum="6">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/easy_of_use"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto_medium" />
+
+                <RadioGroup
+                    android:id="@+id/rgEasyOfUse"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_xx_small"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbEasyOfUseUgly"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+
+                        />
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbEasyOfUseBad"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                         />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbEasyOfUseNotBad"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbEasyOfUseGood"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+
+                       />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbEasyOfUseAwesome"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        app:buttonTint="@color/text_highlighter_blue"
+                        android:layout_height="wrap_content"
+                       />
+
+
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_xx_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:background="@drawable/background_light_blue"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_medium"
+                android:paddingBottom="@dimen/padding_small"
+                android:weightSum="6">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/overall"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto_medium" />
+
+                <RadioGroup
+                    android:id="@+id/rgOverall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_xx_small"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbOverallUgly"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:buttonTint="@color/text_highlighter_blue"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbOverallBad"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                        android:layout_weight="1" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbOverallNotBad"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                        android:layout_weight="1" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbOverallGood"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"
+                        android:layout_weight="1" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbOverallAwesome"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/text_highlighter_blue"/>
+
+
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_extra_small"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_extra_small"
+                android:layout_marginBottom="@dimen/margin_medium"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioGroup
+                        android:id="@+id/rgFeedbackType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/padding_medium"
+                        android:paddingEnd="@dimen/padding_medium">
+
+                        <RadioButton
+                            android:id="@+id/rbComment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="@dimen/padding_small"
+                            android:text="@string/comment"
+                            app:buttonTint="@color/colorPrimary"
+                            android:textColor="@color/primary_text_color" />
+
+
+                        <RadioButton
+                            android:id="@+id/rbBug"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="@dimen/padding_small"
+                            android:text="@string/bug"
+                            app:buttonTint="@color/colorPrimary"
+                            android:textColor="@color/primary_text_color" />
+
+
+                        <RadioButton
+                            android:id="@+id/rbOthers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="@dimen/padding_small"
+                            android:text="@string/others"
+                            app:buttonTint="@color/colorPrimary"
+                            android:textColor="@color/primary_text_color" />
+
+                    </RadioGroup>
+
+                    <View
+                        android:id="@+id/viewSeparator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/rgFeedbackType"
+                        android:background="@color/view_separator" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etFeedbackMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/viewSeparator"
+                        android:textColor="@color/primary_text_color"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="@dimen/text_size_regular"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_light_blue_bottom_radius_only"
+                        android:gravity="start"
+                        android:hint="@string/tell_us_your_thoughts"
+                        android:inputType="textMultiLine"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:maxLength="200"
+                        android:maxLines="10"
+                        android:minLines="4"
+                        android:padding="@dimen/padding_small" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSendFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:background="@drawable/button_background"
+                    android:paddingStart="@dimen/padding_default"
+                    android:paddingEnd="@dimen/padding_default"
+                    android:text="@string/send_feedback"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_regular"
+                    app:backgroundTint="@color/icon_color"
+                    app:fontFamily="@font/roboto_medium" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        
+
+    </androidx.core.widget.NestedScrollView>
+
+    
+
+</androidx.appcompat.widget.LinearLayoutCompat>

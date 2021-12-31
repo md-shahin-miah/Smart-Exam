@@ -1,0 +1,17 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/action_make_moderator"
+        android:orderInCategory="100"
+        android:title="@string/make_moderator"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_remove_admin"
+        android:orderInCategory="100"
+        android:title="@string/remove_from_admin"
+        app:showAsAction="never" />
+
+</menu>
