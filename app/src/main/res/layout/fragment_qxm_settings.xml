@@ -1,0 +1,1185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.fragments.createQxmActivityFragments.QxmSettingsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_qxm_settings"
+        android:layout_width="match_parent"
+        android:layout_marginStart="-16dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:id="@+id/relative_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBackArrow"
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back_arrow"
+                android:padding="@dimen/padding_medium"
+                app:srcCompat="@drawable/ic_back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/ivBackArrow"
+                android:layout_centerVertical="true"
+                android:text="@string/action_bar_title_qxm_settings"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                app:fontFamily="@font/roboto_bold" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar_qxm_settings">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/layout_background_dark"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/padding_default"
+            android:paddingBottom="@dimen/padding_small">
+
+            <!--region QxmCategory-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:text="@string/title_qxm_category"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/hint_qxm_category"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="@dimen/text_size_small"
+                app:fontFamily="@font/roboto" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvQxmCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:scrollbars="horizontal"/>
+
+            <!--endregion-->
+
+            <!--region QxmTime-->
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_qxm_exam_duration"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/text_size_large"
+                    app:fontFamily="@font/roboto_bold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerExamTimeType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp">
+
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <View
+                android:id="@+id/view_examTimeTop"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="100dp"
+                android:visibility="gone"
+                android:background="@color/view_separator" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llExamTimeSelector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerTimeHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1">
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/view_separator" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerTimeMin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1">
+
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/view_separator" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerTimeSeconds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1">
+
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:id="@+id/view_examTimeBottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_marginStart="100dp"
+                android:background="@color/view_separator" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llExamTimeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/title_exam_duration"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto_bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvExamTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_exam_time"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--endregion-->
+
+            <!--region QxmPrivacy-->
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_qxm_privacy"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/text_size_large"
+                    app:fontFamily="@font/roboto_bold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerPrivacyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium">
+
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--endregion-->
+
+            <!-- region Enroll -->
+            <RelativeLayout
+                android:id="@+id/rlQxmEnroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_marginTop="20dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEnroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/enrollment"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/text_size_large" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivEnrollInfo"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_toEndOf="@id/tvEnroll"
+                    app:srcCompat="@drawable/ic_info_icon_light_blue"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchQxmEnroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEnrollHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/settings_enroll_hint"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="visible"
+                app:fontFamily="@font/roboto"
+                />
+
+
+            <!-- endregion -->
+
+            <!--region QXM will be visible-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/title_qxm_will_be_visible"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_bold" />
+
+            <RadioGroup
+                android:id="@+id/rgQxmVisibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_marginTop="12dp">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioQxmVisibilityAfterParticipation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/after_participation"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioQxmVisibilityBeforeParticipation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/before_participation"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+            </RadioGroup>
+
+            <!--endregion-->
+
+            <!--region QXM start schedule-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleQxmStartSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/title_qxm_start_schedule"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_bold" />
+
+            <RadioGroup
+                android:id="@+id/rgQxmStartSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_marginTop="12dp">
+
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioQxmStartInstantly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/instantly"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioQxmStartChooseDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_date_and_time"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioQxmStartManual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_when_clicked_manual_start"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvExamStartManualTip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_extra_large"
+                android:layout_marginBottom="@dimen/margin_extra_small"
+                android:paddingStart="@dimen/padding_extra_large"
+                android:paddingEnd="@dimen/padding_small"
+                android:text="@string/exam_start_manual_tip"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="@dimen/text_size_small"
+                app:fontFamily="@font/roboto"
+                />
+            <!--endregion-->
+
+            <!--region QXM Evaluation-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/title_qxm_evaluation_type"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_bold" />
+
+            <RadioGroup
+                android:id="@+id/rgQxmEvaluation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_marginTop="10dp">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioQxmEvaluateAutomatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/automatic"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEvaluationTypeAutomaticDisableTip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_extra_small"
+                    android:layout_marginStart="@dimen/margin_extra_large"
+                    android:paddingStart="@dimen/padding_small"
+                    android:paddingEnd="@dimen/padding_small"
+                    android:text="@string/evaluation_type_automatic_disable_tips"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEvaluationTypeAutomaticTip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_extra_large"
+                    android:layout_marginBottom="@dimen/margin_extra_small"
+                    android:paddingStart="@dimen/padding_small"
+                    android:paddingEnd="@dimen/padding_small"
+                    android:text="@string/evaluation_type_automatic_tips"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioQxmEvaluateManual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manual"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEvaluationTypeManualTip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_extra_large"
+                    android:layout_marginBottom="@dimen/margin_extra_small"
+                    android:paddingStart="@dimen/padding_small"
+                    android:paddingEnd="@dimen/padding_small"
+                    android:text="@string/evaluation_type_manual_tips"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioQxmEvaluateSemiAutomatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/semi_automatic"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEvaluationTypeSemiAutoTip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_extra_large"
+                    android:layout_marginBottom="@dimen/margin_extra_small"
+                    android:paddingStart="@dimen/padding_small"
+                    android:paddingEnd="@dimen/padding_small"
+                    android:text="@string/evaluation_type_semi_auto_tips"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:fontFamily="@font/roboto" />
+
+            </RadioGroup>
+
+            <!--endregion-->
+
+            <!--region Expiration-->
+
+            <RelativeLayout
+                android:id="@+id/rlQxmExpiration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleQxmExpiration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/switchQxmExpiration"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/title_qxm_expiration"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/text_size_large" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchQxmExpiration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQxmExpirationTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/padding_extra_small"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_below="@id/tvTitleQxmExpiration"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    android:visibility="visible"
+                    app:fontFamily="@font/roboto"
+                    tools:text="Your Qxm will be expired on: 9/7/2019 at 5:20 AM" />
+
+
+            </RelativeLayout>
+
+
+
+            <!--endregion-->
+
+            <!--region Negative Marking-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/negative_marking_for_multiple_choice_question"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkboxNegativeMarking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNegativeMarking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/checkboxNegativeMarking"
+                    android:layout_toStartOf="@+id/etNegativeMarking"
+                    android:maxWidth="280dp"
+                    android:text="@string/negative_points_for_each_question"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etNegativeMarking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:enabled="false"
+                    android:gravity="end"
+                    android:hint="@string/negative_mark_1"
+                    android:inputType="numberDecimal"
+                    android:maxWidth="60dp"
+                    android:minWidth="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/negative_mark_1" />
+
+            </RelativeLayout>
+
+            <!--endregion-->
+
+            <!--region ContestMode-->
+
+            <RelativeLayout
+                android:id="@+id/rlContestMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:padding="@dimen/padding_small">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvContestModeEnabled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/contest_mode"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/text_size_large"
+
+                    app:fontFamily="@font/roboto_bold"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_toEndOf="@+id/tvContestModeEnabled"
+                    app:srcCompat="@drawable/ic_info_icon"
+
+                    />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchContestMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small">
+
+                <View
+                    android:id="@+id/viewOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dialog_body_background_white"
+                    android:clickable="false"
+                    android:alpha="0.4"
+                    />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llContestModeSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="650dp"
+                    android:background="@drawable/dialog_body_background_white"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:padding="@dimen/padding_small">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_time"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/text_size_large"
+                        app:fontFamily="@font/roboto_bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgContestStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/radioContestStartImmediately"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/immediately_after_publish"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_regular"
+                            app:fontFamily="@font/roboto" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/radioContestStartSpecificDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/choose_date_and_time"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_regular"
+                            app:fontFamily="@font/roboto" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/radioContestStartManual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/start_when_clicked_manual_start"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_regular"
+                            app:fontFamily="@font/roboto" />
+
+                    </RadioGroup>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/end_time"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/text_size_large"
+                        app:fontFamily="@font/roboto_bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgContestEndTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/radioContestEndWithExamEnds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/when_exam_duration_ends"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_regular"
+                            app:fontFamily="@font/roboto" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/radioContestEndSpecificDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/choose_date_and_time"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_regular"
+                            app:fontFamily="@font/roboto" />
+
+
+                    </RadioGroup>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/winner_selection_rule"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/text_size_large"
+                        app:fontFamily="@font/roboto_bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/winner_can_see_your_email_address"
+                        android:textColor="@color/secondary_text_color"
+                        android:textSize="@dimen/text_size_small"
+                        app:fontFamily="@font/roboto" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/number_of_winners"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_regular" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etNumberOfWinners"
+                            android:layout_width="wrap_content"
+                            android:minWidth="40dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:maxLines="1"
+                            android:maxWidth="120dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_regular" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerPriorityOne"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:background="@drawable/spinner_background"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="@dimen/padding_extra_large">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerPriorityTwo"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@drawable/spinner_background"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="@dimen/padding_extra_large">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerPriorityThree"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@drawable/spinner_background"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="@dimen/padding_extra_large">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/raffle_draw_is_not_recommended_as_1st_priority"
+                        android:textColor="@color/secondary_text_color"
+                        android:textSize="@dimen/text_size_small"
+                        app:fontFamily="@font/roboto" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvParticipationExpiration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/participation_expiration"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/text_size_large"
+                        app:fontFamily="@font/roboto_bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgParticipationExpiration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/radioParticipationAllow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/people_can_t_participate_after_contest_ends"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_regular"
+                            app:fontFamily="@font/roboto" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/radioParticipationDeny"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/people_can_participate_after_contest_end"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_regular"
+                            app:fontFamily="@font/roboto" />
+
+
+                    </RadioGroup>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </FrameLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/correct_answer_visibility_with_marks"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingStart="@dimen/padding_default"
+                android:paddingEnd="@dimen/padding_default"
+                android:text="@string/if_contest_evaluation_mode_is_not_automatic_then_the_correct_answer_will_be_visible_after_evaluation_done"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="@dimen/text_size_small"
+                app:fontFamily="@font/roboto" />
+
+            <RadioGroup
+                android:id="@+id/rgCorrectAnswerVisibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioCorrectAnsVisibleByDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_date_and_time"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioCorrectAnsVisibleContestEnds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/when_contest_ends"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioCorrectAnsVisibleImmediately"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/immediately_after_answer_submission_by_participant"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioCorrectAnsVisibleAfterQxmExpire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_result_after_the_qxm_expire_date"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/leaderboard_publish_time"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:paddingStart="@dimen/padding_default"
+                android:paddingEnd="@dimen/padding_default"
+                android:text="@string/if_contest_evaluation_mode_is_not_automatic_then_the_correct_answer_will_be_visible_after_evaluation_done"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="@dimen/text_size_small"
+                app:fontFamily="@font/roboto" />
+
+            <RadioGroup
+                android:id="@+id/rgLeaderBoardPublish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioLeaderBoardPublishContinue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/continuous_update"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_extra_small"
+                    android:layout_marginStart="@dimen/margin_extra_large"
+                    android:paddingStart="@dimen/padding_small"
+                    android:paddingEnd="@dimen/padding_small"
+                    android:text="@string/always_update_leader_board_on_participant_s_performance"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioLeaderBoardPublishQxmExpires"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/when_qxm_expires"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    android:visibility="gone"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLeaderBoardPublishQxmExpiresTips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_extra_small"
+                    android:layout_marginStart="@dimen/margin_extra_large"
+                    android:paddingStart="@dimen/padding_small"
+                    android:paddingEnd="@dimen/padding_small"
+                    android:text="@string/if_qxm_has_expiration_date_you_can_use_this_option"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    android:visibility="gone"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioLeaderBoardPublishContestEnds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/when_contest_ends"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    android:visibility="gone"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioLeaderBoardPublishSpecificDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_date_and_time"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/leaderboard_privacy"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_bold" />
+
+            <RadioGroup
+                android:id="@+id/rgLeaderBoardPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioLeaderBoardPrivacyParticipants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/participants_can_see_their_own_position_only"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioLeaderBoardPrivacyPublic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/public_everyone_can_see"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto" />
+
+            </RadioGroup>
+
+
+            <!-- </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+            <!--endregion-->
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="44dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@color/view_separator" />
+            <!--endregion-->
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+    <!--region BottomButtons-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_marginStart="@dimen/margin_default"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveAsDraft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_extra_small"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background_white"
+            android:text="@string/save_as_draft"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_regular"
+            app:elevation="4dp"
+            app:fontFamily="@font/roboto_medium" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnQxmPublish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_extra_small"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background_white"
+            android:text="@string/publish"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_regular"
+            app:elevation="4dp"
+            app:fontFamily="@font/roboto_medium" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!--endregion-->
+</RelativeLayout>

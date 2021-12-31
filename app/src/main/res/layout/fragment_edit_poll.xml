@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Light"
+    tools:context=".views.fragments.poll.EditPollFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="-16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="pin"
+                    app:title="Qxm">
+
+
+                    <RelativeLayout
+                        android:id="@+id/relative_toolbar_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivBackArrow"
+                            android:layout_width="42dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/back_arrow"
+                            android:padding="@dimen/padding_medium"
+                            app:srcCompat="@drawable/ic_back_arrow" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:id="@+id/tvToolbarMsg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/ivBackArrow"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_xx_large"
+                            app:fontFamily="@font/roboto_medium"
+                            tools:ignore="RelativeOverlap"
+                            android:text="@string/edit_poll"/>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPostPoll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:background="?attr/selectableItemBackground"
+                            android:contentDescription="@string/search_icon"
+                            android:padding="@dimen/padding_small"
+                            android:text="@string/update"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_xx_large"
+                            app:fontFamily="@font/roboto_medium"
+                            android:alpha=".5"
+                            android:clickable="false"
+                            android:visibility="visible"/>
+
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvUploadingImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:background="?attr/selectableItemBackground"
+                            android:contentDescription="@string/search_icon"
+                            android:padding="@dimen/padding_small"
+                            android:text="@string/uploading_image"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_small"
+                            app:fontFamily="@font/roboto_medium"
+                            android:clickable="false"
+                            android:visibility="gone"/>
+
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_small"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+
+                android:id="@+id/etPollTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:maxLength="@integer/maxLengthPollTitle"
+                android:textColor="@color/light_black"
+                android:hint="@string/write_poll_title"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddPollThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_thumbnail_in_poll"
+                android:drawableEnd="@drawable/ic_image"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/padding_default"
+                android:layout_marginStart="@dimen/margin_extra_small"
+                app:fontFamily="@font/roboto"
+                android:textColor="@color/light_black"
+                android:background="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:visibility="visible"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rlChangeOrDeletePollThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_extra_small"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+
+                    android:id="@+id/tvChangePollThumbnail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_image"
+                    android:textColor="@color/light_black"
+                    android:drawableEnd="@drawable/ic_image"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:gravity="center_vertical"
+                    app:fontFamily="@font/roboto"
+                    android:background="?attr/selectableItemBackground"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+
+                    android:id="@+id/tvRemovePollThumbnail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remove_image"
+                    android:textColor="@color/light_black"
+                    android:drawableEnd="@drawable/ic_clear_grey"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:gravity="center_vertical"
+                    app:fontFamily="@font/roboto"
+                    android:layout_alignParentEnd="true"
+                    android:background="?attr/selectableItemBackground"/>
+
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPollThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_user_default"
+                android:src="@drawable/ic_add_image"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/options"
+                app:fontFamily="@font/roboto"
+                android:textColor="@color/light_black"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_extra_small"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+
+                android:id="@+id/llcPollOptionOneAndTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/recycler_view_background_color"
+                android:layout_marginTop="@dimen/margin_small"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:clickable="false"/>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+
+                        android:id="@+id/etPollOption1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/rb1"
+                        android:hint="@string/poll_option_1"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/light_black"
+                        app:backgroundTint="@color/light_grey"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+
+                        android:id="@+id/rb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:clickable="false"/>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+
+                        android:id="@+id/etPollOption2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/rb2"
+                        android:hint="@string/poll_option_2"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/light_black"
+                        app:backgroundTint="@color/light_grey"/>
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPollOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fcfcfc"
+                android:layout_marginTop="@dimen/margin_small"
+                android:visibility="visible"/>
+
+            <RelativeLayout
+
+                android:id="@+id/rlAddNewPollAnswerOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:background="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingStart="@dimen/padding_extra_small"
+                android:paddingEnd="@dimen/padding_extra_small"
+                android:alpha=".8">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/rbPollOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_add"
+                    app:tint="@color/colorPrimary"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPollNewOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/rbPollOption"
+                    android:text="@string/add_option"
+                    android:textSize="@dimen/text_size_large"
+                    app:fontFamily="@font/roboto"
+                    android:layout_marginStart="@dimen/margin_extra_small"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_xx_small"
+                    android:background="@color/view_separator"
+                    android:layout_below="@+id/rbPollOption"/>
+
+            </RelativeLayout>
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

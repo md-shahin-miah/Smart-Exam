@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_default">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_list"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="@dimen/text_size_extra_large"
+        android:textColor="@color/light_black"/>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+
+        android:id="@+id/etListTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/list_title"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/margin_small"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list_privacy"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/light_black"
+        android:layout_marginTop="@dimen/margin_small"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+
+        android:id="@+id/spinnerListPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/list_privacy"
+        android:layout_marginTop="@dimen/margin_default">
+
+    </androidx.appcompat.widget.AppCompatSpinner>
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

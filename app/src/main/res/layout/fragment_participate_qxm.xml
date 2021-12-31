@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:visibility="visible"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--SEE QUESTION TOOLBAR-->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_participation_qxm_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="-17dp"
+                android:visibility="visible"
+                app:title="See Question">
+
+                <RelativeLayout
+                    android:id="@+id/relative_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBackArrow"
+                        android:layout_width="42dp"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/padding_medium"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/back_arrow"
+                        app:srcCompat="@drawable/ic_back_arrow" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:id="@+id/tvToolbarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/ivBackArrow"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/see_question"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_xx_large" />
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <!--<RelativeLayout
+                android:id="@+id/rlQxmSetInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_default"
+                android:paddingStart="@dimen/padding_default"
+                android:paddingTop="@dimen/padding_small">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    android:visibility="visible"
+                    app:fontFamily="@font/roboto"
+                    tools:text="Total Time: 1:30 hr" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:ignore="RelativeOverlap"
+                    tools:text="Total Points: 15" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQxmTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tvTotalTime"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_extra_large"
+                    app:fontFamily="@font/roboto_bold"
+                    tools:text="Java Quiz"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivQuestionImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minWidth="@dimen/min_width_thumbnail"
+                    android:minHeight="@dimen/min_height_thumbnail"
+                    android:adjustViewBounds="true"
+                    android:background="@color/semi_transparent"
+                    android:layout_below="@+id/tvQxmTitle"
+                    android:visibility="visible"
+                    android:layout_margin="@dimen/margin_default"
+                    tools:src="@drawable/sample_image" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQxmDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivQuestionImage"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:text="This quiz provides Multiple Choice Questions (MCQs) related to Core Java. Result of this exam is given after submission of your..." />
+
+            </RelativeLayout>-->
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--EXAM TIME COUNTDOWN & PROGRESS BAR-->
+    <RelativeLayout
+        android:id="@+id/rlExamTimeCountdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_collapseMode="pin"
+        app:layout_scrollFlags="enterAlways">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:max="100"
+            android:minHeight="20dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_bar_style_horizontal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTimeRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="@dimen/padding_default"
+            android:paddingStart="@dimen/padding_default"
+            android:textSize="@dimen/text_size_medium"
+            app:fontFamily="@font/roboto"
+            tools:text="1hr 29min 59s" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="@dimen/padding_default"
+            android:paddingStart="@dimen/padding_default"
+            android:textSize="@dimen/text_size_medium"
+            app:fontFamily="@font/roboto"
+            tools:ignore="RelativeOverlap"
+            tools:text="01%" />
+
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvQuestionHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <RelativeLayout
+                android:id="@+id/rlQxmSetInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_default"
+                android:paddingStart="@dimen/padding_default">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    android:visibility="visible"
+                    app:fontFamily="@font/roboto"
+                    tools:text="Total Time: 1:30 hr" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBaseline="@+id/tvTotalTime"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:ignore="RelativeOverlap"
+                    tools:text="Total Points: 15" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQxmTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tvTotalTime"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_extra_large"
+                    app:fontFamily="@font/roboto_bold"
+                    tools:text="Java Quiz"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQxmDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvQxmTitle"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:text="This quiz provides Multiple Choice Questions (MCQs) related to Core Java. Result of this exam is given after submission of your..." />
+
+
+                <FrameLayout
+
+                    android:id="@+id/FLFeedThumbnailContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvQxmDescription"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:id="@+id/ivQuestionImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@color/semi_transparent"
+                        android:minWidth="@dimen/min_width_thumbnail"
+                        android:minHeight="@dimen/min_height_thumbnail"
+                        android:visibility="visible" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:id="@+id/ivYoutubeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_youtube" />
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <!--QUESTION LIST-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvParticipateQxm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_xx_large"
+                 />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <!--submit button-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSubmitAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        >
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|bottom"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:drawablePadding="@dimen/padding_medium"
+        android:drawableStart="@drawable/ic_check_blue"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingStart="@dimen/padding_default"
+        android:text="@string/submit"
+        android:textColor="@color/primary_text_color"
+        android:textSize="@dimen/text_size_regular"
+        app:elevation="4dp"
+        app:fontFamily="@font/roboto_medium" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

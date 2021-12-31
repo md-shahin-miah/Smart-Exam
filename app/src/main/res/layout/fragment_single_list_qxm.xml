@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.AppCompat.Light"
+    tools:context=".views.activities.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_marginStart="-16dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="pin"
+                    app:title="Qxm">
+
+
+                    <RelativeLayout
+                        android:id="@+id/relative_toolbar_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivBackArrow"
+                            android:layout_width="42dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/back_arrow"
+                            android:padding="@dimen/padding_medium"
+                            app:srcCompat="@drawable/ic_back_arrow"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:id="@+id/tvToolbarMsg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            tools:text="List title"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_xx_large"
+                            app:fontFamily="@font/roboto_bold"
+                            android:layout_toEndOf="@+id/ivBackArrow"
+                            tools:ignore="RelativeOverlap"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivSearch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:layout_toStartOf="@+id/ivFilter"
+                            android:contentDescription="@string/search_icon"
+                            android:src="@drawable/ic_search"
+                            android:padding="@dimen/padding_small"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:visibility="gone"/>
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivFilter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:layout_alignParentEnd="true"
+                            android:contentDescription="@string/search_icon"
+                            android:src="@drawable/ic_filter_outline"
+                            android:padding="@dimen/padding_small"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:visibility="gone"/>
+
+
+
+                    </RelativeLayout>
+
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFeedEmptyMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:text="@string/home_empty_feed_message"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="gone"
+            app:fontFamily="@font/roboto" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+            android:id="@+id/swipeRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvFeedEmptyMessage"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFeed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fcfcfc"
+                android:visibility="visible"/>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <FrameLayout
+            android:id="@+id/flLoader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/listFeedProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:indeterminate="true"
+                android:progressDrawable="@color/colorPrimary"
+                android:layout_marginTop="@dimen/margin_default"
+                android:visibility="gone"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_large"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_default"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

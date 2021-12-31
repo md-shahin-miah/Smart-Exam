@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMyGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margin_extra_small"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvGroupImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        app:cardBackgroundColor="@color/layout_background_semi_light"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivGroupImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/users_profile_image"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_add_image" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGroupName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="My Awesome Group"
+        app:fontFamily="@font/roboto_bold"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/text_size_large"
+        android:layout_toEndOf="@+id/cvGroupImage"
+        android:layout_alignTop="@+id/cvGroupImage"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMemberCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2154K Members"
+        android:layout_toEndOf="@+id/cvGroupImage"
+        android:layout_below="@+id/tvGroupName"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        app:fontFamily="@font/roboto"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/secondary_text_color"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/cvGroupImage"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:background="@color/view_separator" />
+
+
+
+</RelativeLayout>

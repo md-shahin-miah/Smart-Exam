@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlInterest"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/margin_small"
+        android:tint="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_heart_outline_grey"
+        />
+
+    <TextView
+        android:id="@+id/tvInterest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_toStartOf="@+id/editInterestIV"
+        android:layout_toEndOf="@+id/imageView"
+        android:text="@string/interest_name"
+        android:textColor="@color/primary_text_color"
+        android:textSize="@dimen/text_size_regular"
+        app:fontFamily="@font/roboto"/>
+
+    <ImageView
+        android:id="@+id/editInterestIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_small"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/ic_pencil" />
+
+</RelativeLayout>
+

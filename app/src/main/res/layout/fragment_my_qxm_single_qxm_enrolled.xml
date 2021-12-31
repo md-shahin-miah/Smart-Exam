@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.fragments.myQxm.myQxmInsideInitialFragment.MyQxmSingleQxmPendingEvaluationListFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-16dp"
+        android:background="@color/colorPrimary"
+        app:title="Enrolled List"
+        app:titleTextColor="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/relative_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBackArrow"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back_arrow"
+                android:padding="@dimen/padding_medium"
+                app:srcCompat="@drawable/ic_back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivBackArrow"
+                android:gravity="center_horizontal"
+                android:text="Enrolled List"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_xx_large"
+                app:fontFamily="@font/roboto_medium" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rvEnrolled"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

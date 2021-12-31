@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rvSearchedContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cvSearchForContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+
+            android:padding="@dimen/padding_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:id="@+id/tvSearchFor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_for"
+                android:textColor="@color/black"
+                app:fontFamily="@font/roboto_medium"
+                android:layout_marginBottom="@dimen/margin_small"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+
+                    android:id="@+id/llcSearchPeople"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/ic_follow_user"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/people"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        app:fontFamily="@font/roboto"
+                        android:textSize="@dimen/text_size_small"
+                        android:textColor="@color/black" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+
+                    android:id="@+id/llcSearchPost"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/ic_drawer_private_qxm"
+                        android:layout_marginStart="@dimen/margin_xx_large"
+                        android:layout_marginEnd="@dimen/margin_xx_large"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qxm"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        app:fontFamily="@font/roboto"
+                        android:textSize="@dimen/text_size_small"
+                        android:textColor="@color/black"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+
+                    android:id="@+id/llcSearchGroup"
+                    android:layout_width="0dp"
+                    android:layout_weight="25"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/ic_drawer_groups"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/groups"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        app:fontFamily="@font/roboto"
+                        android:textSize="@dimen/text_size_small"
+                        android:textColor="@color/black"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cvRecentSearchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_default">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recent_search"
+                    app:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/black"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clear_search_history"
+                    app:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/black"
+                    android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/flLoader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/searchProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true"
+            android:progressDrawable="@color/colorPrimary"
+            android:layout_marginTop="@dimen/margin_default"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlMultipleChoiceOptionHolder"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/rbMultipleChoiceOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMultipleChoiceOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/multiple_choice_option"
+        android:fontFamily="@font/roboto"
+        android:textSize="@dimen/text_size_small"
+        android:background="@color/transparent"
+        android:layout_toEndOf="@id/rbMultipleChoiceOption"
+        android:layout_toStartOf="@id/ivDeleteMcqOption"
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>

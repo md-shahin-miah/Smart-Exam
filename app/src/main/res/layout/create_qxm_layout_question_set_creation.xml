@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/cvAddQuestion"
+            android:layout_marginBottom="@dimen/margin_small">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+
+                    android:id="@+id/cvQuestionSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:padding="@dimen/padding_small">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+
+                                android:id="@+id/etQuestionSetName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/roboto_bold"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/text_size_extra_large"
+                                tools:text="@string/untitled_question_set_name" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+
+                                android:id="@+id/questionSetDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/roboto_light"
+                                android:text="@string/question_set_description"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_size_large" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:id="@+id/ivQuestionSetOPtions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_option" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvQuestionSet"
+                    android:layout_marginTop="@dimen/margin_default"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_medium">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+
+                            android:id="@+id/llcQuestionTypeSpinnerContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/extra_light_grey"
+
+                            android:padding="@dimen/padding_extra_small">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/question_type_array">
+
+                            </androidx.appcompat.widget.AppCompatSpinner>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_image" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+
+                            android:id="@+id/llcMultipleQuestionContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llcQuestionTypeSpinnerContainer"
+                            android:layout_marginTop="@dimen/margin_default"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/text_size_large"
+                                tools:text="@string/untitled_question" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/margin_extra_small"
+                                android:background="@color/light_grey" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_medium"
+                                android:orientation="vertical">
+
+                                <androidx.recyclerview.widget.RecyclerView
+
+                                    android:id="@+id/rvMultipleOptions"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/rbMultipleChoiceOption"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvMultipleChoiceOption"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto"
+                                        android:text="@string/multiple_choice_add_option"
+                                        android:textColor="@color/grey"
+                                        android:textSize="@dimen/text_size_small" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/margin_extra_small"
+                                android:background="@color/light_grey" />
+
+                            <include layout="@layout/create_qxm_question_bottom_layout" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+
+                            android:id="@+id/llcFillTheBlanksContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llcQuestionTypeSpinnerContainer"
+                            android:layout_marginTop="@dimen/margin_default"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:hint="@string/write_your_question_and_insert_blank"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/margin_extra_small"
+                                android:background="@color/light_grey" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+
+                                android:id="@+id/btInsertBlank"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/margin_extra_small"
+                                android:fontFamily="@font/roboto"
+                                android:minHeight="30dp"
+                                android:text="@string/insert_blank"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_regular"
+                                app:backgroundTint="@color/colorPrimary" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/answers"
+                                    android:textColor="@color/light_black"
+                                    android:textSize="@dimen/text_size_regular"
+                                    app:fontFamily="@font/roboto_medium" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+
+                                    android:id="@+id/rvFillBlankAnswers"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"></androidx.recyclerview.widget.RecyclerView>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/margin_extra_small"
+                                android:background="@color/light_grey" />
+
+                            <include layout="@layout/create_qxm_question_bottom_layout" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+
+                            android:id="@+id/llcShortAnswerContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llcQuestionTypeSpinnerContainer"
+                            android:layout_marginTop="@dimen/margin_default"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+
+                                android:id="@+id/tvShortAnswerQuestionName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="start"
+                                android:hint="@string/write_a_question"
+                                android:minHeight="80dp"
+                                android:textColor="@color/light_black"
+                                android:textColorHint="@color/light_grey"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/light_grey" />
+
+
+                            <include layout="@layout/create_qxm_question_bottom_layout" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cvAddQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_upper_sides"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_large"
+            android:paddingBottom="@dimen/padding_small">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_plus" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/add_question" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

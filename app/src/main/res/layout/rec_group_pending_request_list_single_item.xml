@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlSingleGroupMember"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvUserImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/margin_small"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/users_profile_image"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_user_default" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:id="@+id/tvUserFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cvUserImage"
+        android:layout_toStartOf="@+id/tvAccept"
+        android:layout_toEndOf="@+id/cvUserImage"
+        tools:text="@string/user_full_name"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_size_large"
+        app:fontFamily="@font/roboto_medium" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRequestStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserFullName"
+        android:layout_alignStart="@+id/tvUserFullName"
+        android:layout_marginTop="@dimen/margin_xx_small"
+        android:text="@string/request_pending"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="@dimen/text_size_small"
+        app:fontFamily="@font/roboto"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_toStartOf="@+id/tvCancel"
+        android:background="@drawable/background_button_accept"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_xx_small"
+        android:paddingEnd="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_xx_small"
+        android:text="@string/accept"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:fontFamily="@font/roboto_medium"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:background="@drawable/background_button_cancel"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_xx_small"
+        android:paddingEnd="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_xx_small"
+        android:text="@android:string/cancel"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:fontFamily="@font/roboto_medium" />
+
+</RelativeLayout>
+
+

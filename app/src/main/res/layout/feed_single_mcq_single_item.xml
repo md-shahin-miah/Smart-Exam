@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_extra_small"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout_marginEnd="@dimen/margin_extra_small"
+            android:layout_marginBottom="@dimen/margin_extra_small"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="4dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llSingleFeedItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvUserImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivUserImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:contentDescription="@string/users_profile_image"
+                            android:focusable="true"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/ic_user_default" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_medium"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+
+                                android:id="@+id/tvSingleMCQFeedTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_extra_large"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_large"
+                                app:fontFamily="@font/roboto_medium"
+                                tools:text="Who is the champion of FIFA Word Cup in 2018?" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvSingleMCQCreatorFullName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_size_small"
+                                app:fontFamily="@font/roboto"
+                                tools:text="Mridul Das" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxWidth="140dp"
+                                    android:maxLines="1"
+                                    android:text="@string/single_mcq"
+                                    android:textColor="@color/grey"
+                                    android:textSize="@dimen/text_size_small"
+                                    app:fontFamily="@font/roboto" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+
+                                    android:layout_width="4dp"
+                                    android:layout_height="4dp"
+                                    android:layout_marginStart="@dimen/margin_extra_small"
+                                    android:layout_marginEnd="@dimen/margin_extra_small"
+                                    app:srcCompat="@drawable/ic_dot" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:id="@+id/tvSingleMCQCreationTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@color/grey"
+                                    android:textSize="@dimen/text_size_small"
+                                    app:fontFamily="@font/roboto"
+                                    tools:text="@string/sample_time_in_day" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="4dp"
+                                    android:layout_height="4dp"
+                                    android:layout_marginStart="@dimen/margin_extra_small"
+                                    android:layout_marginEnd="@dimen/margin_extra_small"
+                                    app:srcCompat="@drawable/ic_dot" />
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+
+                                    android:id="@+id/ivSingleMCQPrivacy"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:src="@drawable/ic_privacy_public"/>
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:id="@+id/ivSingleMCQFeedOptions"
+                            android:layout_width="30dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentEnd="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/padding_xx_small"
+                            app:srcCompat="@drawable/ic_option" />
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <FrameLayout
+
+                    android:id="@+id/FLFeedThumbnailContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:id="@+id/ivSingleMCQThumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/semi_transparent"
+                        android:layout_height="@dimen/thumbnail_height"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:id="@+id/ivYoutubeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        android:layout_marginBottom="@dimen/margin_medium"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_youtube" />
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSingleMCQTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:maxLines="5"
+                    android:padding="@dimen/margin_small"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:text="Who is the champion of FIFA Word Cup in 2018?" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSingleMCQOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_default"
+                    tools:itemCount="5" />
+
+                <RelativeLayout
+                    android:id="@+id/rlSingleMCQEventsInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:paddingStart="@dimen/padding_small"
+                    android:paddingEnd="@dimen/padding_small">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvParticipantsQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sample_participants_number"
+                        android:textSize="@dimen/text_size_small"
+                        app:fontFamily="@font/roboto" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivIgniteQuantity"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                app:srcCompat="@drawable/ic_ignite" />
+
+                            <TextView
+
+                                android:id="@+id/tvIgniteQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_xx_small"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/number"
+                                android:textSize="@dimen/text_size_small" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:gravity="center_vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                app:srcCompat="@drawable/ic_share" />
+
+                            <TextView
+
+                                android:id="@+id/tvShareQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_xx_small"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/number"
+                                android:textSize="@dimen/text_size_small" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:background="@color/view_separator" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_weight="15">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+
+                        android:id="@+id/llcIgnite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="0dp"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingEnd="@dimen/padding_small"
+                        android:paddingBottom="@dimen/padding_small">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:id="@+id/ivIgnite"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/ic_ignite" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:id="@+id/tvIgnite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_extra_small"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/ignite"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/text_size_medium" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@color/view_separator" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+
+                        android:id="@+id/llcShare"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingBottom="@dimen/padding_small">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:id="@+id/ivShare"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/ic_share" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:id="@+id/tvShare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_extra_small"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/share"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/text_size_medium" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <View
+                        android:id="@+id/viewParticipateBtnSeparator"
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@color/view_separator" />
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+
+                        android:id="@+id/llParticipate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:paddingEnd="0dp"
+                        android:paddingBottom="@dimen/padding_small">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivParticipate"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_participate_hand"
+                            app:tint="@color/grey" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:id="@+id/tvParticipate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_extra_small"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/participate"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/text_size_medium" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/CVContest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/red"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="1dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_negative_extra_small"
+                android:paddingStart="@dimen/padding_medium"
+                android:paddingEnd="@dimen/padding_medium"
+                android:text="@string/contest"
+                android:textColor="@color/white"
+                app:fontFamily="@font/roboto_bold"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="simpletooltip_overlay_alpha">120</integer>
+    <integer name="simpletooltip_animation_duration">800</integer>
+    <integer name="maxLengthEmail">32</integer>
+    <integer name="maxLengthPassword">32</integer>
+    <integer name="maxLengthFirstName">32</integer>
+    <integer name="maxLengthLastName">32</integer>
+    <!--poll-->
+    <integer name="maxLengthPollTitle">256</integer>
+
+    <!--create qxm-->
+    <integer name="maxLengthQxmTitle">200</integer>
+    <integer name="maxLengthQxmDescription">500</integer>
+    <integer name="maxLengthQuestionTitle">300</integer>
+    <integer name="maxLengthFillInTheBlanksQuestion">500</integer>
+    <integer name="maxLengthCharacterLimit">500</integer>
+    <integer name="maxLengthQuestionCharacterLimit">200</integer>
+    <integer name="maxLengthTag">50</integer>
+    <integer name="maxLengthQuestionDescription">200</integer>
+    <integer name="maxLengthQuestionHiddenDescription">200</integer>
+
+    <integer name="maxLengthPoint">2</integer>
+    <integer name="maxLengthCharacterLimitInCreateQxm">3</integer>
+
+    <!--user profile-->
+    <integer name="maxLengthUserDescription">200</integer>
+
+
+</resources>

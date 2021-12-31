@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".views.fragments.group.GroupSettingsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-16dp"
+        android:background="@color/colorPrimary"
+        app:title="Pending Evaluation List"
+        app:titleTextColor="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/relative_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBackArrow"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back_arrow"
+                android:padding="@dimen/padding_default"
+                app:srcCompat="@drawable/ic_back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivBackArrow"
+                android:gravity="center_horizontal"
+                android:text="@string/group_settings"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size_xx_large"
+                app:fontFamily="@font/roboto_bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSave"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_default"
+                app:srcCompat="@drawable/ic_check_white"/>
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rlJoinRequestNeeded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:padding="@dimen/padding_small"
+            android:text="@string/join_request_needed" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchJoinRequestNeeded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:padding="@dimen/padding_small" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlMemberCanAddOther"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:padding="@dimen/padding_small"
+            android:text="@string/member_can_add_other" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchMemberCanAddOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:padding="@dimen/padding_small" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlMembersAreVisibleToOther"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:padding="@dimen/padding_small"
+            android:text="@string/members_are_visible_among_other" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchMemberVisibleToOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:padding="@dimen/padding_small" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:background="@color/view_separator" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_default"
+            android:padding="@dimen/padding_small"
+            android:text="@string/notification" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerNotificationFrequency"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:entries="@array/notification_frequency"
+            android:padding="@dimen/padding_small" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlGroupPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_default"
+            android:padding="@dimen/padding_small"
+            android:text="@string/group_privacy" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerGroupPrivacy"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:entries="@array/group_privacy"
+            android:padding="@dimen/padding_small" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/view_separator" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLeaveGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/leave_group"
+        android:paddingStart="@dimen/padding_extra_large"
+        android:paddingEnd="@dimen/padding_extra_large"
+        android:paddingTop="@dimen/padding_default"
+        android:paddingBottom="@dimen/padding_default"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:textColor="@color/primary_text_color"
+        android:drawableStart="@drawable/ic_logout_variant_grey"
+        android:drawablePadding="@dimen/padding_small"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/text_size_regular"
+        app:textAllCaps="true"
+        android:fontFamily="@font/roboto_medium"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_separator" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDeleteGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_group"
+        android:paddingStart="@dimen/padding_extra_large"
+        android:paddingEnd="@dimen/padding_extra_large"
+        android:paddingTop="@dimen/padding_default"
+        android:paddingBottom="@dimen/padding_default"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:textColor="@color/primary_text_color"
+        android:drawableStart="@drawable/ic_delete_grey"
+        android:drawablePadding="@dimen/padding_small"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/text_size_regular"
+        app:textAllCaps="true"
+        android:fontFamily="@font/roboto_medium"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_separator" />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

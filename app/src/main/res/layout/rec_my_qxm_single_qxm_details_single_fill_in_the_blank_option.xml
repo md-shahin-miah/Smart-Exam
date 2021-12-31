@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:id="@+id/tvFillInTheBlanksOptionSerial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_size_medium"
+        tools:text="(a)"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:id="@+id/tvFillInTheBlanksAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/fill_the_blank_options"
+        android:fontFamily="@font/roboto"
+        android:paddingStart="@dimen/padding_extra_small"
+        android:paddingEnd="@dimen/padding_extra_small"
+        android:textColor="@color/primary_text_color"
+        android:textSize="@dimen/text_size_medium"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

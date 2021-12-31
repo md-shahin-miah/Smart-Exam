@@ -1,0 +1,239 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    tools:context="com.crux.qxm.views.fragments.loginActivityFragments.SignUpFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+
+                android:id="@+id/etFirstName"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_profile"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:gravity="center_vertical"
+                android:hint="@string/first_name"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:maxLength="@integer/maxLengthFirstName"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="@dimen/input_field_top_padding"
+                android:paddingBottom="@dimen/input_field_bottom_padding"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16sp"
+                app:backgroundTint="@color/colorPrimary"
+                app:fontFamily="@font/roboto" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etLastName"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:hint="@string/last_name"
+                android:maxLength="@integer/maxLengthLastName"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingTop="@dimen/input_field_top_padding"
+                android:paddingEnd="0dp"
+                android:paddingBottom="@dimen/input_field_bottom_padding"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16sp"
+                app:backgroundTint="@color/colorPrimary"
+                app:fontFamily="@font/roboto" />
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/input_field_right_margin"
+            android:layout_marginTop="@dimen/input_field_margin_top"
+            android:layout_marginEnd="@dimen/input_field_left_margin"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:gravity="center_vertical"
+            android:hint="@string/email_address"
+            android:maxLength="@integer/maxLengthEmail"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingTop="@dimen/input_field_top_padding"
+            android:paddingBottom="@dimen/input_field_bottom_padding"
+            android:textColor="@color/primary_text_color"
+            android:textSize="16sp"
+            app:backgroundTint="@color/colorPrimary"
+            app:fontFamily="@font/roboto" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:passwordToggleContentDescription="@string/description"
+            app:passwordToggleDrawable="@drawable/toggle_pass"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundColor="@color/white"
+            app:passwordToggleTint="@color/light_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/input_field_right_margin"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/input_field_left_margin"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:maxLength="@integer/maxLengthPassword"
+                android:gravity="center_vertical"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingTop="@dimen/input_field_top_padding"
+                android:paddingBottom="@dimen/input_field_bottom_padding"
+                android:paddingStart="@dimen/padding_xx_small"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16sp"
+                app:fontFamily="@font/roboto"
+                tools:ignore="RtlSymmetry" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_background"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/btn_continue"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:fontFamily="@font/roboto_medium" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:layout_weight="23"
+                android:background="@color/icon_color" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="34"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/or_sign_up_with"
+                android:textColor="@color/icon_color"
+                android:textSize="@dimen/text_size_regular"
+                app:fontFamily="@font/roboto" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:layout_weight="23"
+                android:background="@color/icon_color" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnFacebookLogin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/facebook_login_icon" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnGoogleLogin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/google_login_icon" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_background"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="10dp"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:fontFamily="@font/roboto_medium" />
+
+</RelativeLayout>

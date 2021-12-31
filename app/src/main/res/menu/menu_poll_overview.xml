@@ -1,0 +1,23 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_share_to_group"
+        android:orderInCategory="100"
+        android:title="@string/share_to_group"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_share_link"
+        android:orderInCategory="100"
+        android:title="@string/share_with_others"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_report_poll"
+        android:orderInCategory="100"
+        android:title="@string/report"
+        app:showAsAction="never" />
+
+</menu>

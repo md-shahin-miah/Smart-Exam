@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color> <!--light blue 500 = #2196F3 -->
+    <color name="colorPrimaryDark">#1E88E5</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="light_black">#3B3535</color>
+
+    <color name="light_blue_400">#29B6F6</color>
+    <color name="icon_color">#2196F3</color>
+    <color name="white">#ffffff</color>
+    <color name="white_transparent">#A6ffffff</color>
+    <color name="light_grey">#d3d3d3</color>
+    <color name="extra_light_grey">#F2F2F2</color>
+    <color name="violet_grey">#BCC5D3</color>
+    <color name="content_divider">#E3E3E3</color>
+    <color name="input_field_box_color">#E3E3E3</color>
+
+    <!-- Profile Activity drawable icons color -->
+    <color name="grey">#8f8f8f</color>
+    <color name="icon_color_2">#47a5ef</color>
+    <color name="icon_color_gray">#757575</color>
+    <color name="view_separator">#E3E3E3</color>
+    <color name="view_separator_gray">#707070</color>
+    <color name="title_text_color">#4F4F4F</color>
+    <color name="primary_text_color">#3B3535</color>
+    <color name="secondary_text_color">#8F8F8F</color>
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent">#28000000</color>
+    <color name="medium_transparent">#16000000</color>
+    <color name="red">#FF2424</color>
+    <color name="warning">#f95757</color>
+    <color name="warning_light">#F38686</color>
+
+    <!-- QXM GroupSettingsContainer -->
+    <color name="title_bar_background">#AFD8F7</color>
+    <color name="layout_background">#F7F7F7</color>
+    <color name="layout_background_semi_light">#F2F0F0</color>
+    <color name="layout_background_dark">#EBEBEB</color>
+    <color name="raffle_draw_spinner_background">#B1DDFF</color>
+
+    <!-- Qxm Participation -->
+    <color name="progress_bar_green">#56EC82</color>
+    <color name="progress_bar_red">#ec565b</color>
+    <color name="progress_bar_green_background">#bcecca</color>
+    <color name="background_question_title">#B1DDFF</color>
+    <color name="background_short_answer">#DCEEFC</color>
+
+    <!-- Qxm Evaluation-->
+    <color name="background_color_lite_blue_fill">#F6FAFE</color>
+    <color name="background_color_lite_warning">#fdb4ae</color>
+    <color name="background_color_lite_warning_border">#ff8a80</color>
+    <color name="background_color_lite_blue_border">#E7F3FD</color>
+    <color name="background_color_lite_orange_fill">#fefcf6</color>
+    <color name="background_color_lite_orange_border">#fdf2e7</color>
+    <color name="btn_background_color_wrong_answer_transparent">#20EB144F</color>
+    <color name="btn_background_color_wrong_answer">#EB144F</color>
+    <color name="btn_background_color_correct_answer_transparent">#203DB56F</color>
+    <color name="btn_background_color_correct_answer">#3DB56F</color>
+    <color name="correct_answer">#3DB56F</color>
+    <color name="partially_correct_answer">#8B8847</color>
+    <color name="wrong_answer">#EB144F</color>
+    <color name="answer_not_found">#FEF4EE</color>
+    <color name="background_evaluation_fill_in_the_blanks_option">#DCEEFC</color>
+    <color name="character_remain_text_color">#EF5350</color>
+    <color name="green">#00C853</color>
+
+    <!--tool tip color-->
+    <color name="simpletooltip_background">@color/colorPrimary</color>
+    <color name="simpletooltip_text">@color/white</color>
+    <color name="simpletooltip_arrow">@color/colorPrimary</color>
+    <!-- Enroll -->
+    <color name="btn_text_color_blue">#29B6F6</color>
+
+
+    <!-- Following -->
+    <color name="recycler_view_background_color">#fcfcfc</color>
+    <color name="online">#48A5F7</color>
+
+    <!--Notification-->
+    <color name="background_light_blue">#E7F4FF</color>
+
+    <!--ActivityLogOld-->
+    <color name="text_highlighter_blue">#70B5EB</color>
+
+    <!--EvaluationPendingListFragment-->
+    <color name="evaluation_pending">#F18331</color>
+    <color name="text_color_gray">#B6B6B6</color>
+    <color name="text_color_light_white">#F7F7F7</color>
+    <!--ProfileSettings-->
+    <color name="text_color_deep_gray">#707070</color>
+    <color name="text_color_create_description">#63727E</color>
+    <color name="onboarding_color">#5D6FE6</color>
+</resources>

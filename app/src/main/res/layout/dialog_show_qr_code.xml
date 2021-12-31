@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_large"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/padding_default"
+    android:paddingTop="@dimen/padding_default"
+    android:paddingEnd="@dimen/padding_default"
+    android:paddingBottom="@dimen/padding_small">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="@string/qr_code"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/text_size_large"
+            app:fontFamily="@font/roboto_bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivShare"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="@dimen/padding_xx_small"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_share" />
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvQRCodeFor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/text_size_regular"
+        app:fontFamily="@font/roboto_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_medium"
+        android:gravity="center_vertical"
+        tools:text="Group Name: " />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivQrCode"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="@dimen/padding_xx_small"
+        android:src="@drawable/sample_image" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/close"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_regular"
+        app:fontFamily="@font/roboto_bold" />
+</LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

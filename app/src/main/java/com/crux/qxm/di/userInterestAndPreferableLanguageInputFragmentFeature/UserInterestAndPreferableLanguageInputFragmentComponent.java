@@ -1,0 +1,12 @@
+package com.crux.qxm.di.userInterestAndPreferableLanguageInputFragmentFeature;
+
+import com.crux.qxm.di.appFeature.component.AppComponent;
+import com.crux.qxm.views.fragments.loginActivityFragments.UserInterestAndPreferableLanguageInputFragment;
+
+import dagger.Component;
+
+@UserInterestAndPreferableLanguageInputFragmentScope
+@Component (modules = UserInterestAndPreferableLanguageInputFragmentModule.class, dependencies = AppComponent.class)
+public interface UserInterestAndPreferableLanguageInputFragmentComponent {
+    void injectUserInterestAndPreferableLanguageInputFragmentFeature (UserInterestAndPreferableLanguageInputFragment userInterestAndPreferableLanguageInputFragment);
+}

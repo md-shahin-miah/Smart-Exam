@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_extra_small"
+        android:layout_marginEnd="@dimen/margin_extra_small"
+        android:layout_marginBottom="@dimen/margin_extra_small"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="4dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llSingleFeedItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvUserImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/extra_light_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivQxmCreatorImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:contentDescription="@string/users_profile_image"
+                        android:focusable="true"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_user_default" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:id="@+id/tvQxmTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_extra_large"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_large"
+                            app:fontFamily="@font/roboto_medium"
+                            tools:text="@tools:sample/lorem/random" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_default"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+
+                                android:id="@+id/tvQxmCreatorName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:clickable="true"
+                                android:ellipsize="end"
+                                android:focusable="true"
+                                android:maxLines="1"
+                                android:maxWidth="170dp"
+                                tools:text="Fozle Rabbi Shafi Fozle"
+                                android:textColor="@color/secondary_text_color"
+                                android:textSize="@dimen/text_size_small"
+                                app:fontFamily="@font/roboto" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+
+                                android:layout_width="4dp"
+                                android:layout_height="4dp"
+                                android:layout_marginEnd="@dimen/margin_extra_small"
+                                android:layout_marginStart="@dimen/margin_extra_small"
+                                app:srcCompat="@drawable/ic_dot" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+
+                                android:id="@+id/tvQxmCreationTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="@string/sample_time_in_day"
+                                android:textColor="@color/secondary_text_color"
+                                android:textSize="@dimen/text_size_small"
+                                app:fontFamily="@font/roboto" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="4dp"
+                                android:layout_height="4dp"
+                                android:layout_marginEnd="@dimen/margin_extra_small"
+                                android:layout_marginStart="@dimen/margin_extra_small"
+                                app:srcCompat="@drawable/ic_dot" />
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+
+                                android:id="@+id/ivQxmPrivacy"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                app:srcCompat="@drawable/ic_public" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:id="@+id/ivPerformanceOptions"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:srcCompat="@drawable/ic_option" />
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPerformance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_regular"
+                app:fontFamily="@font/roboto_medium"
+                tools:text="My Performance: 90%" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:background="@color/view_separator" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_extra_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_extra_small">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQxmCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    tools:text="Category: Education, Technology"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    app:fontFamily="@font/roboto" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    tools:text="My Position: 1"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    app:fontFamily="@font/roboto" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

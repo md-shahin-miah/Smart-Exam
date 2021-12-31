@@ -1,0 +1,249 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin_default"
+    tools:context="com.crux.qxm.views.fragments.loginActivityFragments.LoginFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/qxm_logo" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:maxLength="@integer/maxLengthEmail"
+            android:textColor="@color/primary_text_color"
+            android:textSize="16sp"
+            app:backgroundTint="@color/colorPrimary"
+            app:fontFamily="@font/roboto"
+            android:hint="@string/email_address"
+            android:paddingBottom="16dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:passwordToggleContentDescription="@string/description"
+            app:passwordToggleDrawable="@drawable/toggle_pass"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundColor="@color/white"
+            app:passwordToggleTint="@color/light_grey"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:hint="@string/password"
+                android:maxLength="@integer/maxLengthPassword"
+                android:inputType="textPassword"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16sp"
+                android:paddingStart="@dimen/padding_xx_small"
+                app:fontFamily="@font/roboto"
+                tools:ignore="RtlSymmetry"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+
+            android:id="@+id/checkRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_negative_extra_small"
+            android:fontFamily="@font/roboto"
+            android:text="@string/remember_me"
+            android:textColor="@color/secondary_text_color"
+            app:buttonTint="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+
+            android:id="@+id/checkAgreeTermAndPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_negative_extra_small"
+            android:checked="true"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/agree_term_and_policy"
+            android:textColor="@color/secondary_text_color"
+            app:buttonTint="@color/colorPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:id="@+id/tvTermsAndPrivacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:background="?attr/selectableItemBackground"
+            android:text="Terms and policy"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_small"
+            app:fontFamily="@font/roboto"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_background"
+            android:minWidth="300dp"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:backgroundTint="@color/icon_color"
+            app:fontFamily="@font/roboto_medium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:id="@+id/tvForgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="?attr/selectableItemBackground"
+            android:paddingStart="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_xx_small"
+            android:paddingEnd="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_xx_small"
+            android:text="@string/forget_your_password"
+            android:textColor="@color/secondary_text_color"
+            app:fontFamily="@font/roboto" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:layout_width="40dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/login_page_small_chunk"
+            android:textSize="12sp"
+            app:fontFamily="@font/roboto" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            android:layout_weight="30"
+            android:background="@color/icon_color" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:gravity="center"
+            android:text="@string/or_sign_in_with"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/text_size_regular"
+            app:fontFamily="@font/roboto" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            android:layout_weight="30"
+            android:background="@color/icon_color" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnFacebookLogin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/facebook_login_icon" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnGoogleLogin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/google_login_icon" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/btSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/button_background"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_marginTop="@dimen/margin_small"
+            app:fontFamily="@font/roboto_medium"/>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

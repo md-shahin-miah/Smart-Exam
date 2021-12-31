@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.fragments.userProfileActivityFragments.UserProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsibleToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="Profile"
+            app:layout_collapseMode="parallax">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relative_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBackArrow"
+                        android:layout_width="42dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/back_arrow"
+                        android:padding="@dimen/padding_medium"
+                        app:srcCompat="@drawable/ic_back_arrow" />
+
+                    <TextView
+                        android:id="@+id/tvToolbarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivBackArrow"
+                        android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:text="@string/profile"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_size_xx_large"
+                        app:fontFamily="@font/roboto_medium" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUploadingImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/margin_default"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="false"
+                        android:contentDescription="@string/search_icon"
+                        android:padding="@dimen/padding_small"
+                        android:text="@string/uploading_image"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_small"
+                        android:visibility="gone"
+                        app:fontFamily="@font/roboto_medium" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlUserProfileHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fl_profile_image"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="65dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_profile_pic"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/users_profile_image"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/ic_user_default" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llChangeImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|bottom"
+                                android:layout_marginBottom="3dp"
+                                android:background="@color/medium_transparent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/padding_extra_small"
+                                android:paddingTop="@dimen/padding_xx_small"
+                                android:paddingEnd="@dimen/padding_extra_small"
+                                android:paddingBottom="@dimen/padding_xx_small">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginEnd="5dp"
+                                    app:srcCompat="@drawable/camera" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+
+                                    android:id="@+id/tvChangeImage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/change_image"
+                                    android:textColor="@color/secondary_text_color"
+                                    android:textSize="12sp"
+                                    app:fontFamily="@font/roboto_light" />
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </FrameLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUserFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fl_profile_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="16sp"
+                        tools:text="Mridul Das" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUserStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvUserFullName"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="12sp"
+                        tools:text="Online" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llUserAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvUserStatus"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llMyQxm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                app:srcCompat="@drawable/ic_profile_qxms" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/roboto_light"
+                                android:lines="2"
+                                android:padding="5dp"
+                                android:text="@string/my_qxm"
+                                android:gravity="center_horizontal|top"
+                                android:textSize="13sp"/>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llFollowUser"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivUserFollow"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_follower_blue"
+                                android:gravity="center_horizontal|top"
+                                app:backgroundTint="@color/colorPrimary"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvFollow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/roboto_light"
+                                android:lines="2"
+                                android:padding="5dp"
+                                android:text="@string/follow"
+                                android:textSize="13sp" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llActivity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                app:srcCompat="@drawable/ic_profile_activity" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/roboto_light"
+                                android:lines="2"
+                                android:padding="5dp"
+                                android:gravity="center_horizontal|top"
+                                android:text="@string/activity_log"
+                                android:textSize="13sp" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llProfileSettings"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                app:srcCompat="@drawable/ic_profile_settings" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center_horizontal|top"
+                                android:lines="2"
+                                android:padding="5dp"
+                                android:text="@string/profile_settings"
+                                android:textSize="13sp" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llOtherOptions"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:gravity="center_horizontal"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                app:srcCompat="@drawable/ic_profile_action_other" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center_horizontal|top"
+                                android:lines="2"
+                                android:padding="5dp"
+                                android:text="@string/other_options"
+                                android:textSize="13sp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <LinearLayout
+                        android:id="@+id/llUserBasicInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llUserAction"
+                        android:layout_marginTop="@dimen/margin_default"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/view_separator" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llUserStatusBoard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+
+                                android:id="@+id/llcFollowers"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="@string/followers"
+                                    android:textColor="@color/primary_text_color" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvUserFollowers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:textColor="@color/secondary_text_color"
+                                    tools:text="0" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/view_separator" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+
+                                android:id="@+id/llcFollowing"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="@string/following"
+                                    android:textColor="@color/primary_text_color" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvUserFollowings"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:textColor="@color/secondary_text_color"
+                                    tools:text="0" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/view_separator" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+
+                                android:id="@+id/llcGroups"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="@string/groups"
+                                    android:textColor="@color/primary_text_color" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvUserGroups"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:textColor="@color/secondary_text_color"
+                                    tools:text="0" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/view_separator" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+
+                                android:id="@+id/llcQxms"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="@string/qxms"
+                                    android:textColor="@color/primary_text_color" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvUserQxms"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/roboto"
+                                    android:textColor="@color/secondary_text_color"
+                                    tools:text="0" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/view_separator" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llUserBasicInfo"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="10dp"
+                            app:srcCompat="@drawable/map_marker" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_small"
+                            android:text="@string/lives_in"
+                            android:textSize="13sp"
+                            app:fontFamily="@font/roboto" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvUserLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="13sp"
+                            app:fontFamily="@font/roboto_medium"
+                            tools:text="Sylhet, Bangladesh." />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llStudy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llLocation"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="10dp"
+                            app:srcCompat="@drawable/ic_institution" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_small"
+                            android:text="@string/studied_at"
+                            android:textSize="13sp"
+                            app:fontFamily="@font/roboto" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvUserEducation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="13sp"
+                            app:fontFamily="@font/roboto_medium"
+                            tools:text="Shahjalal University School, Sylhet." />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llOccupation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llStudy"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="10dp"
+                            app:srcCompat="@drawable/ic_briefcase" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvUserOccupation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="13sp"
+                            app:fontFamily="@font/roboto_medium"
+                            tools:text="Full Stack Developer at CRUX" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <View
+                        android:id="@+id/vSeparator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/llOccupation"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/view_separator" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vSeparator"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_small"
+                        android:text="@string/details"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/roboto_medium" />
+
+                    <View
+                        android:id="@+id/vSeparator2"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_below="@+id/tvDetails"
+
+                        android:background="@color/view_separator" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvQxms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vSeparator2"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/qxms"
+                        android:textColor="@color/secondary_text_color"
+                        app:fontFamily="@font/roboto_medium" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFeedEmptyMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:text="@string/profile_empty_feed_message"
+                        android:textColor="@color/secondary_text_color"
+                        android:textSize="@dimen/text_size_large"
+                        android:visibility="visible"
+                        app:fontFamily="@font/roboto"
+                        android:layout_below="@+id/tvQxms"
+                        android:layout_marginBottom="@dimen/margin_small"/>
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvUserProfileFeed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <include
+            android:id="@+id/noInternetView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/no_internet_layout"
+            android:visibility="gone"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

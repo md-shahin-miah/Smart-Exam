@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.fragments.settings.QxmAppSettingsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_home_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-16dp"
+                app:title="Qxm">
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBackArrow"
+                        android:layout_width="42dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/back_arrow"
+                        android:padding="@dimen/padding_medium"
+                        app:srcCompat="@drawable/ic_back_arrow" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivBackArrow"
+                        android:gravity="center_horizontal"
+                        android:text="@string/settings"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_size_xx_large"
+                        app:fontFamily="@font/roboto_medium" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_default"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_xx_small"
+                    android:text="@string/push_notifications"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto_medium"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchPushNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvTitleNotification"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_default" />
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:background="@color/view_separator"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <!-- <androidx.appcompat.widget.AppCompatTextView
+                     android:id="@+id/tvTitlePushNotifications"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentStart="true"
+                     android:layout_alignParentTop="true"
+                     android:text="@string/push_notification"
+                     android:textColor="@color/primary_text_color"
+                     android:textSize="@dimen/text_size_large"
+                     app:fontFamily="@font/roboto"
+                     tools:ignore="RelativeOverlap" />-->
+
+                <!--<androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHintTitlePushNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitlePushNotifications"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/get_notifications_from_qxms_followings_groups" />-->
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitlePlaySound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleNotificationBehavior"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/play_sound"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkBoxPlaySound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvTitlePlaySound"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_medium" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleVibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitlePlaySound"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/vibrate"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkBoxVibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvTitleVibrate"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_medium" />
+
+                <!--<androidx.appcompat.widget.AppCompatTextView-->
+                <!--android:id="@+id/tvTitlePushNotificationCategories"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/tvTitleVibrate"-->
+                <!--android:layout_marginTop="@dimen/margin_default"-->
+                <!--android:layout_marginBottom="@dimen/margin_xx_small"-->
+                <!--android:text="@string/push_notification_categories"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:textColor="@color/primary_text_color"-->
+                <!--android:textSize="@dimen/text_size_large"-->
+                <!--app:fontFamily="@font/roboto_medium" />-->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSubTitleNotificationCategories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notification_categories"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginBottom="0dp"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/secondary_text_color"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleFollowingNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSubTitleNotificationCategories"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/following_notifications"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchFollowingNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvTitleFollowingNotifications"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="@dimen/margin_medium" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleGroupNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleFollowingNotifications"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/group_notifications"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchGroupNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvTitleGroupNotifications"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="@dimen/margin_medium" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleParticipationNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleGroupNotifications"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/participation_notifications"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchParticipationNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvTitleParticipationNotifications"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="@dimen/margin_medium" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleEvaluationNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleParticipationNotifications"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/evaluation_notifications"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchEvaluationNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvTitleEvaluationNotifications"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="@dimen/margin_medium" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleResultNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleEvaluationNotifications"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/result_notifications"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchResultNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvTitleResultNotifications"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="@dimen/margin_medium" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitlePollNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitleResultNotifications"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="@string/poll_notifications"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto"
+                    tools:ignore="RelativeOverlap" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchPollNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvTitlePollNotifications"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="@dimen/margin_medium" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleNotificationBehavior"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notification_behavior"
+                    android:layout_marginTop="@dimen/margin_default"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginBottom="0dp"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/secondary_text_color"
+                    android:layout_below="@id/tvTitlePollNotifications"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_xx_small"
+                android:text="@string/about"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_regular"
+                app:fontFamily="@font/roboto_medium" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:background="@color/view_separator"
+
+                />
+
+            <!--<androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvQxmPrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:background="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/title_privacy"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_medium" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvQxmTermsAndConditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:background="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/qxm_terms_and_conditions"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_large"
+                app:fontFamily="@font/roboto_medium" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvThirdPartyNotices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:paddingStart="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_small"
+                android:layout_marginTop="@dimen/margin_xx_small"
+                android:background="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/third_party_notices"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_regular"
+                app:fontFamily="@font/roboto" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleQxmVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:paddingStart="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:text="@string/version"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_regular"
+                app:fontFamily="@font/roboto" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvQxmVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:paddingStart="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_small"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:background="?attr/selectableItemBackground"
+                android:paddingBottom="@dimen/padding_small"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="@dimen/text_size_medium"
+                app:fontFamily="@font/roboto"
+                tools:text="0.91 alpha" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

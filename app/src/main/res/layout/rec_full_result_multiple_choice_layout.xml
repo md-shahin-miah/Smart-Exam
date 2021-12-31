@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_extra_small"
+        app:cardCornerRadius="@dimen/card_view_radius_small"
+
+        app:cardUseCompatPadding="false"
+
+        >
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/padding_extra_small"
+                android:layout_marginStart="@dimen/margin_extra_small"
+                android:text="@string/multiple_choice"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="@dimen/text_size_medium" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_extra_small"
+                android:layout_marginStart="@dimen/margin_extra_small"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:background="@drawable/background_participate_qxm_question_title"
+                android:paddingBottom="@dimen/padding_medium"
+                android:paddingEnd="@dimen/padding_default"
+                android:paddingStart="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_small">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQuestionNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_extra_large"
+                    tools:text="Q 1" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQuestionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_extra_small"
+                    android:fontFamily="@font/roboto_medium"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_large"
+                    tools:text="What is a class in java?" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:id="@+id/ivQuestionImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                tools:src="@drawable/sample_image"
+                android:minWidth="@dimen/min_width_thumbnail"
+                android:minHeight="@dimen/min_height_thumbnail"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rvMultipleOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llQuestionEvaluationResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:background="@drawable/background_correct_answer_full_result_preview"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAnswerResult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.05"
+                    android:gravity="start"
+                    android:padding="@dimen/padding_medium"
+                    android:text="@string/your_answer_is_correct"
+                    android:textColor="@color/correct_answer"
+                    app:fontFamily="@font/roboto_bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAnswerAchievePoints"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.95"
+                    android:gravity="end"
+                    android:padding="@dimen/padding_medium"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    android:visibility="visible"
+                    app:fontFamily="@font/roboto"
+                    tools:text="You have got 5 out of 5" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:id="@+id/rlAnswerIsNotFound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:background="@drawable/background_answer_not_found_full_result"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:padding="@dimen/padding_medium"
+                    android:text="@string/correct_answer_is_not_available"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    app:fontFamily="@font/roboto"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivInfo"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/margin_extra_small"
+                    app:backgroundTint="@color/icon_color_gray"
+                    android:padding="@dimen/padding_small"
+                    app:srcCompat="@drawable/ic_info_icon" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llCorrectAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:background="@drawable/background_correct_answer_full_result_preview"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/correct_answer"
+                    android:textColor="@color/correct_answer"
+                    android:textSize="@dimen/text_size_regular"
+                    app:fontFamily="@font/roboto_bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCorrectAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    app:fontFamily="@font/roboto"
+                    tools:text="A class is a blue print from which individual objects are created. A class can contain fields and methods to describe the behavior of an object." />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

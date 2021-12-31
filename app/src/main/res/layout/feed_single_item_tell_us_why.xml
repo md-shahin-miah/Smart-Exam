@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    app:contentPadding="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTellUsWhy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tell_us_why_camel_case"
+            android:layout_alignParentStart="true"
+            app:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/title_text_color"
+            android:padding="@dimen/padding_medium"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClose"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/ic_close"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/grey"
+            android:padding="@dimen/padding_small"/>
+
+        <RadioGroup
+            android:id="@+id/rgTellUsWhy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTellUsWhy"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingStart="@dimen/padding_medium"
+            android:paddingEnd="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_small"
+            >
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbAlreadyParticipated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/i_ve_already_participated_in_this_qxm"
+                android:padding="@dimen/padding_small"
+                android:textColor="@color/primary_text_color"
+                app:fontFamily="@font/roboto"/>
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbDoNotLikeThisQxm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/i_don_t_like_this_qxm"
+                android:padding="@dimen/padding_small"
+                android:textColor="@color/primary_text_color"
+                app:fontFamily="@font/roboto"
+                />
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbNotInterested"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/i_m_not_interested_in_this_category_category_name"
+                android:padding="@dimen/padding_small"
+                android:textColor="@color/primary_text_color"
+                app:fontFamily="@font/roboto"
+                />
+        </RadioGroup>
+
+
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
